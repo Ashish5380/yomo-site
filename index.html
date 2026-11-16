@@ -19,6 +19,40 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#d3e4fe","tertiary-fixed-dim":"#4edea3","on-primary-container":"#8683ba","primary-fixed-dim":"#c4c1fb","tertiary-container":"#002819","surface-bright":"#f8f9ff","on-secondary-fixed":"#0f0069","surface-tint":"#5b598c","secondary-fixed-dim":"#c3c0ff","on-error":"#ffffff","on-secondary-fixed-variant":"#3323cc","outline-variant":"#c8c5d0","surface-container-high":"#dce9ff","tertiary-fixed":"#6ffbbe","inverse-primary":"#c4c1fb","on-tertiary-fixed":"#002113","on-error-container":"#93000a","on-tertiary-container":"#009d6c","on-surface-variant":"#47464f","on-primary-fixed":"#181445","secondary":"#4b41e1","tertiary":"#000f07","surface-container-lowest":"#ffffff","background":"#f8f9ff","on-secondary":"#ffffff","primary-container":"#1e1b4b","inverse-surface":"#213145","secondary-container":"#645efb","on-primary":"#ffffff","surface-container":"#e5eeff","surface-dim":"#cbdbf5","on-surface":"#0b1c30","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#444173","outline":"#787680","on-tertiary-fixed-variant":"#005236","error":"#ba1a1a","secondary-fixed":"#e3dfff","surface":"#f8f9ff","on-tertiary":"#ffffff","primary":"#070235","error-container":"#ffdad6","primary-fixed":"#e3dfff","surface-container-low":"#eff4ff","on-background":"#0b1c30","on-secondary-container":"#fffbff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","gutter-mobile":"0.75rem","gutter":"1rem","space-xl":"2rem","space-md":"1rem","margin":"1.5rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script>
 </head>
 <body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-sm group" href="index.html">
+<div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 shadow-sm bg-[#ff1493]/10 flex items-center justify-center animate-yomo-float"><img alt="yomo mascot logo" class="w-full h-full object-contain" src="assets/mascot.png"/></div>
+<span class="font-headline-lg text-headline-md tracking-tight font-extrabold text-primary">yomo</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed uppercase tracking-wider font-bold">AI</span>
+</a>
+<nav class="hidden xl:flex items-center gap-space-sm">
+<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-primary font-bold bg-surface-container transition-all" href="index.html">Home</a>
+<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#features">Features</a>
+<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#how-it-works">How It Works</a>
+<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#personas">Personas</a>
+<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="security.html">Security</a>
+<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="pricing.html">Pricing</a>
+</nav>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-[0_4px_14px_rgba(7,2,53,0.18)] hover:bg-primary-container transition-all" href="pricing.html"><span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span><span>Lock in ₹99/mo</span></a>
+<button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="xl:hidden w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span id="menu-icon" class="material-symbols-outlined text-xl">menu</span></button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden xl:hidden bg-surface/95 backdrop-blur-xl border-t border-[#c8c5d0]/40 shadow-lg">
+<nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html">Home</a>
+<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html#features">Features</a>
+<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html#how-it-works">How It Works</a>
+<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html#personas">Personas</a>
+<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="security.html">Security</a>
+<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="pricing.html">Pricing</a>
+<a class="px-3 py-3 rounded-lg font-label-lg text-label-lg font-bold text-primary bg-primary-fixed/30 hover:bg-primary-fixed/50" href="pricing.html">₹99/mo Founding Plan →</a>
+</nav>
+</div>
+</header>
 <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
 <div class="flex flex-col w-full">
 <aside aria-label="Announcement" class="w-full bg-primary-container text-on-primary py-2.5 px-6 relative overflow-hidden">
