@@ -1,869 +1,771 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Yomo — Chat-First AI Money App for India | Rs 99/mo Founding Plan</title>
-<meta name="description" content="Yomo is the chat-first AI money app for Indian Gen Z. Syncs Gmail, Zerodha & INDmoney, answers money questions in chat with Roast/Pro/Zen personas. Founding Member plan Rs 99/mo — first 100 lock Rs 99/mo forever. // Founding Member: Rs 99/mo lifetime price."/>
-<meta property="og:title" content="Yomo — Chat-First AI Money App for India | Rs 99/mo Founding Plan"/>
-<meta property="og:description" content="Yomo is the chat-first AI money app for Indian Gen Z. Syncs Gmail, Zerodha & INDmoney, answers money questions in chat with Roast/Pro/Zen personas. Founding Member plan Rs 99/mo — first 100 lock Rs 99/mo forever. // Founding Member: Rs 99/mo lifetime price."/>
-<meta property="og:image" content="assets/icon-180.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#f8f9fb"/>
+<title>Yomo — the read-only money assistant for India</title>
+<meta name="description" content="Yomo reads the bank alerts in your Gmail, the statements you forward and, on Android, the bank SMS on your phone — then answers what you can spend, what you owe and where it went. No bank logins. Free to start."/>
+<link rel="canonical" href="https://meetyomo.in/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Yomo"/>
+<meta property="og:title" content="Yomo — the read-only money assistant for India"/>
+<meta property="og:description" content="Yomo reads the bank alerts in your Gmail, the statements you forward and, on Android, the bank SMS on your phone — then answers what you can spend, what you owe and where it went. No bank logins. Free to start."/>
+<meta property="og:url" content="https://meetyomo.in/"/>
+<meta property="og:image" content="https://meetyomo.in/assets/icon-180.png"/>
+<meta name="twitter:card" content="summary"/>
 <link rel="icon" href="assets/icon-64.png" type="image/png" sizes="64x64"/>
 <link rel="apple-touch-icon" href="assets/icon-180.png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>@layer base{html,body{margin:0;padding:0;scroll-behavior:smooth;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}/* Smooth Scroll Trigger Animation Classes */.scroll-reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);will-change:opacity, transform;}.scroll-reveal-left{opacity:0;transform:translateX(-32px);transition:opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);will-change:opacity, transform;}.scroll-reveal-right{opacity:0;transform:translateX(32px);transition:opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);will-change:opacity, transform;}.scroll-reveal-scale{opacity:0;transform:scale(0.94) translateY(20px);transition:opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);will-change:opacity, transform;}.revealed{opacity:1!important;transform:translate(0, 0) scale(1)!important;}.delay-100{transition-delay:100ms;}.delay-200{transition-delay:200ms;}.delay-300{transition-delay:300ms;}.delay-400{transition-delay:400ms;}@keyframes yomoFloat{0%,100%{transform:translateY(0px) rotate(0deg);}50%{transform:translateY(-5px) rotate(1.5deg);}}.animate-yomo-float{animation:yomoFloat 4s ease-in-out infinite;}/* 3D Tilt Card */.tilt-card-grid{perspective:1200px;}.tilt-card{position:relative;transform-style:preserve-3d;transition:transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;will-change:transform;overflow:hidden;}.tilt-glare{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 0.3s ease;mix-blend-mode:overlay;z-index:10;}/* FAQ details */details>summary{list-style:none;cursor:pointer;}details>summary::-webkit-details-marker{display:none;}details[open] .faq-chevron{transform:rotate(180deg);}@media (prefers-reduced-motion: reduce){.scroll-reveal,.scroll-reveal-left,.scroll-reveal-right,.scroll-reveal-scale{opacity:1!important;transform:none!important;transition:none!important;}.animate-yomo-float{animation:none!important;}.tilt-card{transform:none!important;transition:none!important;}.tilt-glare{display:none!important;}}</style>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#d3e4fe","tertiary-fixed-dim":"#4edea3","on-primary-container":"#8683ba","primary-fixed-dim":"#c4c1fb","tertiary-container":"#002819","surface-bright":"#f8f9ff","on-secondary-fixed":"#0f0069","surface-tint":"#5b598c","secondary-fixed-dim":"#c3c0ff","on-error":"#ffffff","on-secondary-fixed-variant":"#3323cc","outline-variant":"#c8c5d0","surface-container-high":"#dce9ff","tertiary-fixed":"#6ffbbe","inverse-primary":"#c4c1fb","on-tertiary-fixed":"#002113","on-error-container":"#93000a","on-tertiary-container":"#009d6c","on-surface-variant":"#47464f","on-primary-fixed":"#181445","secondary":"#4b41e1","tertiary":"#000f07","surface-container-lowest":"#ffffff","background":"#f8f9ff","on-secondary":"#ffffff","primary-container":"#1e1b4b","inverse-surface":"#213145","secondary-container":"#645efb","on-primary":"#ffffff","surface-container":"#e5eeff","surface-dim":"#cbdbf5","on-surface":"#0b1c30","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#444173","outline":"#787680","on-tertiary-fixed-variant":"#005236","error":"#ba1a1a","secondary-fixed":"#e3dfff","surface":"#f8f9ff","on-tertiary":"#ffffff","primary":"#070235","error-container":"#ffdad6","primary-fixed":"#e3dfff","surface-container-low":"#eff4ff","on-background":"#0b1c30","on-secondary-container":"#fffbff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","gutter-mobile":"0.75rem","gutter":"1rem","space-xl":"2rem","space-md":"1rem","margin":"1.5rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script>
-</head>
-<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-<div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md">
-<div class="flex items-center gap-space-lg">
-<a class="flex items-center gap-space-sm group" href="index.html">
-<div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 shadow-sm bg-[#ff1493]/10 flex items-center justify-center animate-yomo-float"><img alt="yomo mascot logo" class="w-full h-full object-contain" src="assets/mascot.png"/></div>
-<span class="font-headline-lg text-headline-md tracking-tight font-extrabold text-primary">yomo</span>
-<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed uppercase tracking-wider font-bold">AI</span>
-</a>
-<nav class="hidden xl:flex items-center gap-space-sm">
-<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-primary font-bold bg-surface-container transition-all" href="index.html">Home</a>
-<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#features">Features</a>
-<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#how-it-works">How It Works</a>
-<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#personas">Personas</a>
-<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="security.html">Security</a>
-<a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="pricing.html">Pricing</a>
-</nav>
-</div>
-<div class="flex items-center gap-space-md">
-<a class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-[0_4px_14px_rgba(7,2,53,0.18)] hover:bg-primary-container transition-all" href="pricing.html"><span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span><span>Lock in ₹99/mo</span></a>
-<button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="xl:hidden w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span id="menu-icon" class="material-symbols-outlined text-xl">menu</span></button>
-</div>
-</div>
-<div id="mobile-menu" class="hidden xl:hidden bg-surface/95 backdrop-blur-xl border-t border-[#c8c5d0]/40 shadow-lg">
-<nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
-<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html">Home</a>
-<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html#features">Features</a>
-<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html#how-it-works">How It Works</a>
-<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="index.html#personas">Personas</a>
-<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="security.html">Security</a>
-<a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container" href="pricing.html">Pricing</a>
-<a class="px-3 py-3 rounded-lg font-label-lg text-label-lg font-bold text-primary bg-primary-fixed/30 hover:bg-primary-fixed/50" href="pricing.html">₹99/mo Founding Plan →</a>
-</nav>
-</div>
-</header>
-<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
-<div class="flex flex-col w-full">
-<aside aria-label="Announcement" class="w-full bg-primary-container text-on-primary py-2.5 px-6 relative overflow-hidden">
-<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-<div class="flex items-center gap-2.5">
-<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">⚡</span>
-<span class="font-label-md text-label-md text-on-primary flex flex-wrap items-center gap-1.5">
-<strong class="font-bold text-tertiary-fixed">Founding Member Offer:</strong>
-<span>First 100 users lock Rs 99/mo — forever.</span>
-<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/15 text-primary-fixed text-label-sm font-semibold">73/100 Claimed</span>
-</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="hidden md:inline-flex items-center gap-1 text-on-primary-container font-body-sm text-body-sm">
-<span class="material-symbols-outlined text-sm text-tertiary-fixed">lock</span> Cancel anytime · no hidden fees
-        </span>
-<a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold hover:bg-surface-container-lowest transition-colors" href="#claim-alpha">
-          Lock in ₹99/mo <span class="material-symbols-outlined text-xs">arrow_forward</span>
-</a>
-</div>
-</div>
-</aside>
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-20 w-full">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-<!-- Left Column: Value Prop & Early Access -->
-<div class="lg:col-span-7 flex flex-col gap-6 scroll-reveal-left">
-<!-- Floating Tag Cluster -->
-<div class="flex flex-wrap items-center gap-2">
-<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
-<span class="material-symbols-outlined text-xs">forum</span> Chat-First Money Intelligence
-          </span>
-<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
-<span class="material-symbols-outlined text-xs text-error">local_fire_department</span> Roast &amp; Pro Advisor
-          </span>
-<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-xs text-on-tertiary-container">account_balance</span> RBI Account Aggregator
-          </span>
-</div>
-<!-- Headline & Narrative -->
-<div>
-<h1 class="font-display-lg text-display-lg text-primary tracking-tight font-extrabold max-w-2xl">
-            Your Money Has Questions. <br class="hidden sm:inline"/>
-<span class="text-secondary">yomo Has Unfiltered Answers.</span>
-</h1>
-<p class="mt-4 font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-            The chat-first AI money app for Indian Gen Z. It connects to your Gmail, Zerodha, INDmoney, and bank alerts — then turns raw financial data into sharp advice, real-time insights, or a brutal financial roast.
-          </p>
-</div>
-<!-- Lead Intake Form Card -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-[0_12px_32px_-4px_rgba(30,27,75,0.08)] flex flex-col gap-4" id="claim-alpha">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
-<span class="font-label-lg text-label-lg font-bold text-primary">Get yomo at ₹99/mo, locked forever</span>
-</div>
-<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-bold">First 100 Only</span>
-</div>
-<form class="flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); document.getElementById('claim-state').classList.remove('hidden');">
-<input class="h-13 px-4 rounded-full bg-surface-container text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none flex-grow shadow-inner" placeholder="Enter your Gmail / work address" required="" type="email"/>
-<button class="h-13 px-7 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap" type="submit">
-<span>Lock in ₹99/mo</span>
-<span class="material-symbols-outlined text-base">arrow_forward</span>
-</button>
-</form>
-<div class="hidden p-3 rounded-lg bg-surface-container-high text-primary text-body-sm font-body-sm flex items-center gap-2" id="claim-state">
-<span class="material-symbols-outlined text-secondary text-base">mark_email_read</span>
-<span>You're locked into a Founding spot at ₹99/mo — forever. Your verification magic link is dispatched to your inbox.</span>
-</div>
-<!-- Trust Subtext -->
-<div class="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
-<span class="inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-sm text-secondary">bolt</span> Setup in 90 seconds
-            </span>
-<span class="inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-sm text-on-tertiary-container">encrypted</span> Read-only 256-bit encryption
-            </span>
-<span class="inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-sm text-outline">verified</span> Zero spam guaranteed
-            </span>
-</div>
-</div>
-<!-- Sentinel Mascot Pill -->
-<div class="p-4 rounded-xl bg-surface-container flex items-center gap-4">
-<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container-lowest animate-yomo-float">
-<img alt="yomo Sentinel AI mascot with smirk" class="w-full h-full object-contain p-1" src="assets/mascot.png"/>
-</div>
-<div class="min-w-0">
-<div class="flex items-center gap-2">
-<span class="font-label-md text-label-md font-bold text-primary">yomo Sentinel</span>
-<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full bg-surface-container-high text-secondary font-bold">ONLINE</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">
-              "Live: Ask me anything. Or hit 'Roast' if you dare look at last night's UPI trail."
-            </p>
-</div>
-</div>
-</div>
-<!-- Right Column: Interactive Chat Simulation Showcase -->
-<div class="lg:col-span-5 flex flex-col scroll-reveal-right">
-<div class="rounded-xl bg-surface-container-lowest shadow-[0_20px_40px_-8px_rgba(30,27,75,0.12)] overflow-hidden">
-<!-- Chat Simulation Window Chrome -->
-<div class="p-4 bg-primary text-on-primary flex items-center justify-between">
-<div class="flex items-center gap-2">
-<div class="w-3 h-3 rounded-full bg-error"></div>
-<div class="w-3 h-3 rounded-full bg-secondary-fixed"></div>
-<div class="w-3 h-3 rounded-full bg-tertiary-fixed"></div>
-<span class="ml-2 font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed-dim">Intelligence Stream</span>
-</div>
-<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest/10 text-on-primary">v2.4 Live Sync</span>
-</div>
-<!-- Mode Switching Pill Tabs -->
-<div class="p-3 bg-surface-container-low flex items-center gap-1.5 overflow-x-auto">
-<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm font-bold bg-primary text-on-primary transition-all flex items-center gap-1 shrink-0 shadow-sm" id="btn-roast" onclick="switchChatMode('roast')">
-<span>🔥 Roast Mode</span>
-</button>
-<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-1 shrink-0" id="btn-pro" onclick="switchChatMode('pro')">
-<span>🧠 Pro Advisor</span>
-</button>
-<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-1 shrink-0" id="btn-zen" onclick="switchChatMode('zen')">
-<span>🧘 Zen Wealth</span>
-</button>
-</div>
-<!-- Chat Canvas Body -->
-<div class="p-5 flex flex-col gap-4 bg-surface">
-<!-- User Prompt -->
-<div class="flex justify-end">
-<div class="max-w-[85%] rounded-xl rounded-tr-none bg-surface-container-highest p-3.5 text-on-surface shadow-xs">
-<p class="font-body-md text-body-md font-medium" id="chat-user-prompt">
-                  Analyze my portfolio &amp; roast my food delivery spends last month 💀
-                </p>
-<span class="block text-right mt-1 font-label-sm text-label-sm text-on-surface-variant">11:42 PM · Verified CAS + UPI</span>
-</div>
-</div>
-<!-- AI Response Box -->
-<div class="flex items-start gap-3">
-<div alt="yomo avatar" aria-hidden="true" class="w-8 h-8 rounded-full shrink-0 mt-1 shadow-sm flex items-center justify-center" id="chat-avatar" style="background:linear-gradient(135deg, #ff1493 0%, #4b41e1 100%);">
-<span class="text-white font-headline-md font-extrabold text-[12px]">y</span>
-</div>
-<div class="flex-1 rounded-xl rounded-tl-none bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error/15 text-error font-bold flex items-center gap-1" id="chat-badge">
-<span class="material-symbols-outlined text-xs">local_fire_department</span> ROAST ACTIVATED
-                  </span>
-<span class="font-label-sm text-label-sm text-outline">Latency: 280ms</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed" id="chat-ai-response">
-                  Bro, you spent <strong class="text-error font-bold">₹24,800</strong> across 37 Swiggy orders. That’s literally <strong class="text-primary font-bold">2.5x</strong> your monthly Nifty 50 SIP! You ate your own compound interest. 🥑📉
-                </p>
-<!-- Embedded Micro Metrics Strip -->
-<div class="grid grid-cols-3 gap-2 pt-2" id="chat-metrics-grid">
-<div class="p-2.5 rounded-lg bg-surface-container text-center">
-<span class="block font-label-sm text-label-sm text-on-surface-variant">Portfolio XIRR</span>
-<span class="font-label-md text-label-md font-bold text-on-tertiary-container">+14.2%</span>
-</div>
-<div class="p-2.5 rounded-lg bg-surface-container text-center">
-<span class="block font-label-sm text-label-sm text-on-surface-variant">Food Drag</span>
-<span class="font-label-md text-label-md font-bold text-error">-3.8%</span>
-</div>
-<div class="p-2.5 rounded-lg bg-surface-container text-center">
-<span class="block font-label-sm text-label-sm text-on-surface-variant">Idle Bank Cash</span>
-<span class="font-label-md text-label-md font-bold text-primary">₹1.85L</span>
-</div>
-</div>
-<!-- Recommendation Action Pill -->
-<div class="p-2.5 rounded-lg bg-surface-container-high flex items-center justify-between gap-2" id="chat-action-bar">
-<div class="flex items-center gap-1.5 min-w-0">
-<span class="material-symbols-outlined text-secondary text-base">psychology_alt</span>
-<span class="font-label-sm text-label-sm font-semibold text-primary truncate" id="chat-action-text">Rebalance ₹1.2L idle cash to Arbitrage Fund?</span>
-</div>
-<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shrink-0 hover:bg-primary-container transition-colors">
-                    Execute
-                  </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Bottom Footer Note in Card -->
-<div class="px-5 py-3 bg-surface-container-low flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span class="flex items-center gap-1">
-<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Zerodha Kite &amp; HDFC Bank Synced
-            </span>
-<span class="text-outline">Encrypted TLS 1.3</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section: "Everything Starts in Chat" Feature Showcase -->
-<section class="w-full bg-surface-container-low py-20 px-6 lg:px-12" id="features">
-<div class="max-w-7xl mx-auto flex flex-col gap-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 scroll-reveal">
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Unfiltered Clarity</span>
-<h2 class="mt-2 font-display-lg text-display-lg text-primary font-extrabold tracking-tight">
-            Everything Starts in Chat.
-          </h2>
-<p class="mt-2 font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-            No endless dashboards with 40 tabs. Ask like a human; receive institutional-grade answers synthesized across your fragmented financial life.
-          </p>
-</div>
-<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-base text-secondary">touch_app</span>
-<span>Tap any prompt below to test real-time synthesis</span>
-</div>
-</div>
-<!-- 3-Column Interactive Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 tilt-card-grid">
-<!-- Prompt Card 1 -->
-<article class="p-6 rounded-xl bg-surface-container-lowest shadow-[0_4px_16px_-2px_rgba(30,27,75,0.04)] hover:shadow-[0_16px_36px_-4px_rgba(79,70,229,0.12)] transition-all flex flex-col justify-between gap-6 scroll-reveal delay-100 tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-bold">Lifestyle Leakage</span>
-<span class="material-symbols-outlined text-on-surface-variant">receipt_long</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold">
-              "How much did I waste on Swiggy &amp; Zomato last month?"
-            </h3>
-<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant">30-Day Food Burn</span>
-<span class="font-label-lg text-label-lg font-bold text-error">₹18,400</span>
-</div>
-<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
-<div class="bg-error h-2 rounded-full w-3/4"></div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                28 deliveries detected. 64% ordered between 11 PM – 2 AM with a 1.4x surge multiplier.
-              </p>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 relative z-10">
-<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
-              Parsed from UPI SMS alerts <span class="material-symbols-outlined text-xs">arrow_forward</span>
-</span>
-</div>
-</article>
-<!-- Prompt Card 2 -->
-<article class="p-6 rounded-xl bg-surface-container-lowest shadow-[0_4px_16px_-2px_rgba(30,27,75,0.04)] hover:shadow-[0_16px_36px_-4px_rgba(79,70,229,0.12)] transition-all flex flex-col justify-between gap-6 scroll-reveal delay-200 tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-bold">Asset Allocation</span>
-<span class="material-symbols-outlined text-on-surface-variant">candlestick_chart</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold">
-              "Is my small-cap mutual fund risk too high right now?"
-            </h3>
-<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant">Small Cap Exposure</span>
-<span class="font-label-lg text-label-lg font-bold text-on-secondary-fixed-variant">38.4% (Limit: 25%)</span>
-</div>
-<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
-<div class="bg-secondary-container h-2 rounded-full w-[85%]"></div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                Drift Alert: 13.4% overweight vs your moderate risk mandate. Volatility sensitivity: High.
-              </p>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 relative z-10">
-<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
-              Synced with CAMS / Zerodha CAS <span class="material-symbols-outlined text-xs">arrow_forward</span>
-</span>
-</div>
-</article>
-<!-- Prompt Card 3 -->
-<article class="p-6 rounded-xl bg-surface-container-lowest shadow-[0_4px_16px_-2px_rgba(30,27,75,0.04)] hover:shadow-[0_16px_36px_-4px_rgba(79,70,229,0.12)] transition-all flex flex-col justify-between gap-6 scroll-reveal delay-300 tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-bold">Card Optimizer</span>
-<span class="material-symbols-outlined text-on-surface-variant">credit_score</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold">
-              "Which credit card gives the best return for flights this week?"
-            </h3>
-<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant">Optimal Route</span>
-<span class="font-label-lg text-label-lg font-bold text-on-tertiary-container">HDFC Infinia (9.9%)</span>
-</div>
-<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
-<div class="bg-tertiary-fixed-dim h-2 rounded-full w-[95%]"></div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                Smart routing recommends SmartBuy portal for 5X reward points vs Axis Atlas base miles.
-              </p>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 relative z-10">
-<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
-              Rewards matrix updated 2h ago <span class="material-symbols-outlined text-xs">arrow_forward</span>
-</span>
-</div>
-</article>
-</div>
-<!-- Synthesis Banner Callout -->
-<div class="p-5 rounded-xl bg-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-4 scroll-reveal delay-200">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-tertiary-fixed shrink-0">
-<span class="material-symbols-outlined text-lg">auto_awesome</span>
-</div>
-<div>
-<h4 class="font-label-lg text-label-lg font-bold text-primary">Instant Intelligence Synthesis</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              Every response is corroborated across bank feeds, tax regimes (Old vs New), and current SEBI valuations.
-            </p>
-</div>
-</div>
-<a class="px-5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-colors whitespace-nowrap" href="#claim-alpha">
-          Test Your Portfolio
-        </a>
-</div>
-</div>
-</section>
-<!-- Section: Multi-Persona AI Showcase -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full" id="personas">
-<div class="text-center max-w-2xl mx-auto mb-14 scroll-reveal">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Tailored Delivery</span>
-<h2 class="mt-2 font-display-lg text-display-lg text-primary font-extrabold tracking-tight">
-        Switch Financial Personalities in 1 Tap.
-      </h2>
-<p class="mt-3 font-body-lg text-body-lg text-on-surface-variant">
-        Whether you need a brutal reality check, institutional rigor, or calm peace of mind, yomo adapts to your psychology.
-      </p>
-</div>
-<!-- Side-by-Side 3 Persona Matrix -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 tilt-card-grid">
-<!-- Persona 1: Roast Mode -->
-<div class="rounded-xl bg-surface-container-lowest p-8 shadow-[0_4px_20px_rgba(30,27,75,0.04)] flex flex-col justify-between scroll-reveal delay-100 hover:shadow-xl transition-all tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="flex items-center justify-between">
-<span class="w-12 h-12 rounded-xl bg-error/15 text-error flex items-center justify-center font-headline-md text-headline-md">
-              🔥
-            </span>
-<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-error">Unfiltered Wake-Up</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold">Roast Mode</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Savage, brutally honest wake-up calls designed to demolish lifestyle inflation, uninvested idle balances, and speculative FOMO trades.
-          </p>
-<div class="p-4 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm italic">
-            "You spent ₹64,000 on clubs this month while your PPF contribution is ₹0. Your retirement strategy is literally just vibes."
-          </div>
-<ul class="space-y-2.5 pt-2">
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
-<span class="material-symbols-outlined text-error text-base">check_circle</span>
-<span>Lifestyle inflation shaming</span>
-</li>
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
-<span class="material-symbols-outlined text-error text-base">check_circle</span>
-<span>Zero-sugarcoat idle cash warnings</span>
-</li>
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
-<span class="material-symbols-outlined text-error text-base">check_circle</span>
-<span>F&amp;O loss reality checks</span>
-</li>
-</ul>
-</div>
-<div class="pt-6 relative z-10">
-<span class="block text-center py-2.5 rounded-full bg-error/10 text-error font-label-md text-label-md font-bold">
-            Best for overspenders
-          </span>
-</div>
-</div>
-<!-- Persona 2: Pro Advisor Mode -->
-<div class="rounded-xl bg-primary text-on-primary p-8 shadow-[0_20px_40px_-8px_rgba(30,27,75,0.2)] flex flex-col justify-between relative overflow-hidden scroll-reveal-scale delay-200 tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="flex items-center justify-between">
-<span class="w-12 h-12 rounded-xl bg-surface-container-lowest/15 text-tertiary-fixed flex items-center justify-center font-headline-md text-headline-md">
-              🧠
-            </span>
-<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-tertiary-fixed">CFA &amp; RIA Grade</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-primary font-bold">Pro Advisor Mode</h3>
-<p class="font-body-md text-body-md text-primary-fixed-dim">
-            Institutional-level precision for HNWIs. Automated tax-loss harvesting, Sharpe ratio audits, SGB yields, and Monte Carlo FIRE simulations.
-          </p>
-<div class="p-4 rounded-lg bg-surface-container-lowest/10 text-surface-bright font-body-sm text-body-sm">
-            "Identified ₹48,200 in short-term capital loss that can offset your real estate token gain before March 31 under Section 70."
-          </div>
-<ul class="space-y-2.5 pt-2">
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-primary">
-<span class="material-symbols-outlined text-tertiary-fixed text-base">verified</span>
-<span>Tax-loss harvesting 3.0</span>
-</li>
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-primary">
-<span class="material-symbols-outlined text-tertiary-fixed text-base">verified</span>
-<span>Mutual fund overlap decomposition</span>
-</li>
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-primary">
-<span class="material-symbols-outlined text-tertiary-fixed text-base">verified</span>
-<span>Automated safe withdrawal rates</span>
-</li>
-</ul>
-</div>
-<div class="pt-6 relative z-10">
-<span class="block text-center py-2.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold">
-            Institutions &amp; HNWIs
-          </span>
-</div>
-</div>
-<!-- Persona 3: Zen Wealth -->
-<div class="rounded-xl bg-surface-container-lowest p-8 shadow-[0_4px_20px_rgba(30,27,75,0.04)] flex flex-col justify-between scroll-reveal delay-300 hover:shadow-xl transition-all tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="flex items-center justify-between">
-<span class="w-12 h-12 rounded-xl bg-surface-container-high text-secondary flex items-center justify-center font-headline-md text-headline-md">
-              🧘
-            </span>
-<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-secondary">Stress-Free Peace</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold">Zen Wealth</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Calm, anxiety-reducing financial guardrails. Clear 'safe-to-spend' daily numbers and reassuring emergency runway projections.
-          </p>
-<div class="p-4 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm italic">
-            "Breathe easy. All monthly fixed commitments are funded. You have ₹1,400 safe guilt-free spend allocated for today."
-          </div>
-<ul class="space-y-2.5 pt-2">
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
-<span class="material-symbols-outlined text-secondary text-base">spa</span>
-<span>Daily safe-to-spend allowance</span>
-</li>
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
-<span class="material-symbols-outlined text-secondary text-base">spa</span>
-<span>8-Month emergency buffer tracker</span>
-</li>
-<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
-<span class="material-symbols-outlined text-secondary text-base">spa</span>
-<span>Zero anxiety alert thresholds</span>
-</li>
-</ul>
-</div>
-<div class="pt-6 relative z-10">
-<span class="block text-center py-2.5 rounded-full bg-surface-container-high text-primary font-label-md text-label-md font-bold">
-            Best for peace of mind
-          </span>
-</div>
-</div>
-</div>
-</section>
-<!-- Section: How It Works — Zero Manual Entry, Deep 360° Real-Time Sync -->
-<section class="w-full bg-surface-container-low py-20 px-6 lg:px-12" id="how-it-works">
-<div class="max-w-7xl mx-auto flex flex-col gap-12">
-<div class="max-w-2xl scroll-reveal">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">How It Works · Autonomous Ingestion</span>
-<h2 class="mt-2 font-display-lg text-display-lg text-primary font-extrabold tracking-tight">
-          Zero Manual Entry. Deep 360° Real-Time Sync.
-        </h2>
-<p class="mt-2 font-body-lg text-body-lg text-on-surface-variant">
-          Forget spreadsheets. yomo continuously synchronizes your entire financial ecosystem via read-only APIs and regulated frameworks.
-        </p>
-</div>
-<!-- 3-Step Strip -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 scroll-reveal delay-100">
-<div class="p-4 rounded-xl bg-surface-container-high/60 flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg font-bold shrink-0">1</span><span class="font-label-md text-label-md font-bold text-primary">Connect Gmail, Zerodha &amp; INDmoney</span></div>
-<div class="p-4 rounded-xl bg-surface-container-high/60 flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg font-bold shrink-0">2</span><span class="font-label-md text-label-md font-bold text-primary">Ask your money questions in chat</span></div>
-<div class="p-4 rounded-xl bg-surface-container-high/60 flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg font-bold shrink-0">3</span><span class="font-label-md text-label-md font-bold text-primary">Unfilter with Roast, Pro or Zen</span></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 tilt-card-grid">
-<!-- Sync Card 1 -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 scroll-reveal delay-100 transition-all tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-2xl text-secondary">mail</span>
-</div>
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Automated Parsing</span>
-<h3 class="font-headline-md text-headline-md text-primary font-bold mt-1">Gmail Smart Sync</h3>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-              Instantly parses UPI transaction receipts, monthly bank e-statements, credit card bills, and consolidated CAMS/KFintech CAS files using client-side tokenized read access.
-            </p>
-</div>
-<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant relative z-10">
-<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span> AES-256 Tokenized</span>
-<span>Zero Credential Storage</span>
-</div>
-</div>
-<!-- Sync Card 2 -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 scroll-reveal delay-200 transition-all tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-2xl text-secondary">trending_up</span>
-</div>
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Direct Broker Stream</span>
-<h3 class="font-headline-md text-headline-md text-primary font-bold mt-1">Zerodha Kite API</h3>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-              Streams real-time stock holdings, open intraday trades, derivatives exposure, and unrealized capital gain/loss directly via official Kite Connect read sessions.
-            </p>
-</div>
-<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant relative z-10">
-<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Official Connect Partner</span>
-<span>Sub-second Latency</span>
-</div>
-</div>
-<!-- Sync Card 3 -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 scroll-reveal delay-300 transition-all tilt-card">
-<div class="flex flex-col gap-4 relative z-10">
-<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-2xl text-secondary">public</span>
-</div>
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Global Consolidation</span>
-<h3 class="font-headline-md text-headline-md text-primary font-bold mt-1">INDmoney &amp; US Stocks</h3>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-              Seamlessly aggregates US equities (S&amp;P 500, Nasdaq), EPF, NPS, Sovereign Gold Bonds (SGB), and physical gold holdings into one real-time INR net-worth calculation.
-            </p>
-</div>
-<div class="pt-4 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant relative z-10">
-<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span> Currency Auto-Hedge</span>
-<span>Multi-Asset Unified</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section: Institutional-Grade Security & Trust Matrix -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full" id="security">
-<div class="text-center max-w-2xl mx-auto mb-14 scroll-reveal">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Non-Custodial Architecture</span>
-<h2 class="mt-2 font-display-lg text-display-lg text-primary font-extrabold tracking-tight">
-        Institutional-Grade Security &amp; Trust.
-      </h2>
-<p class="mt-3 font-body-lg text-body-lg text-on-surface-variant">
-        Engineered with the same non-negotiable security protocols employed by tier-1 custodial banks and clearing corporations.
-      </p>
-</div>
-<!-- 4 Clean Trust Cards -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 tilt-card-grid">
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 scroll-reveal delay-100 hover:shadow-lg transition-all tilt-card">
-<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary relative z-10">
-<span class="material-symbols-outlined text-xl">lock</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold relative z-10">256-Bit Encrypted</h3>
-<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
-          Hardware-level AES-256 encryption at rest, accompanied by TLS 1.3 cryptographic tunnels for every data packet.
-        </p>
-</div>
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 scroll-reveal delay-200 hover:shadow-lg transition-all tilt-card">
-<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-tertiary-container relative z-10">
-<span class="material-symbols-outlined text-xl">visibility</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold relative z-10">Read-Only Rights</h3>
-<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
-          yomo possesses zero withdrawal or trade execution authority. We never touch, hold, or move your capital.
-        </p>
-</div>
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 scroll-reveal delay-300 hover:shadow-lg transition-all tilt-card">
-<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary relative z-10">
-<span class="material-symbols-outlined text-xl">crisis_alert</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold relative z-10">Not Investment Advice</h3>
-<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
-          Yomo is an analytics engine, not a SEBI-registered investment adviser — and never sells investment products.
-        </p>
-</div>
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 scroll-reveal delay-400 hover:shadow-lg transition-all tilt-card">
-<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary relative z-10">
-<span class="material-symbols-outlined text-xl">account_balance</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary font-bold relative z-10">RBI Account Aggregator</h3>
-<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
-          Operates via licensed RBI-AA NBFCs. 100% consent-driven, revocable instantly from your bank app at any moment.
-        </p>
-</div>
-</div>
-<!-- Guaranteed Privacy Banner -->
-<div class="mt-8 p-6 rounded-xl bg-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-4 scroll-reveal delay-200">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-2xl text-secondary">shield</span>
-<div>
-<span class="font-label-lg text-label-lg font-bold text-primary">Guaranteed Privacy Charter</span>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Your personal data is never sold to credit card spammers, NBFC lenders, or telemarketers. Period. <a class="text-secondary font-semibold hover:underline" href="security.html">Read the full security approach →</a>
-          </p>
-</div>
-</div>
-<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant shrink-0">
-<span class="material-symbols-outlined text-base text-on-tertiary-container">verified</span> ISO 27001 Certified Stack
-      </div>
-</div>
-</section>
-<!-- Section: Founding Member Pricing -->
-<!-- Pricing: Founding Member plan, Rs 99/mo (first 100 lock Rs 99/mo forever) -->
-<section class="w-full bg-surface-container py-20 px-6 lg:px-12" id="pricing">
-<div class="max-w-4xl mx-auto flex flex-col items-center">
-<div class="text-center scroll-reveal">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Fair &amp; Transparent</span>
-<h2 class="mt-2 font-display-lg text-display-lg text-primary font-extrabold tracking-tight text-center">
-        Lock In Founding-Member Alpha.
-      </h2>
-<p class="mt-2 font-body-lg text-body-lg text-on-surface-variant text-center max-w-xl">
-        Be one of the first 100 early supporters and lock Rs 99/mo — forever — instead of recurring SaaS prices.
-      </p>
-</div>
-<!-- Spotlight Founding Card -->
-<div class="w-full mt-10 rounded-xl bg-surface-container-lowest p-8 lg:p-10 shadow-[0_20px_40px_-8px_rgba(30,27,75,0.08)] flex flex-col gap-8 relative overflow-hidden scroll-reveal-scale">
-<!-- Top Status Banner inside Card -->
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6">
-<div>
-<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">
-              FOUNDING MEMBER OFFER
-            </span>
-<h3 class="font-headline-lg text-headline-lg text-primary font-extrabold mt-2">
-              Founding Member Plan
-            </h3>
-</div>
-<div class="flex flex-col sm:items-end">
-<div aria-label="Rs 99 per month" class="flex items-baseline gap-1">
-<span class="font-display-lg text-display-lg font-extrabold text-primary">₹99</span>
-<span class="font-body-md text-body-md text-on-surface-variant">/ month</span>
-</div>
-<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Locked forever for the first 100</span>
-</div>
-</div>
-<!-- Real-Time Slot Progress Meter -->
-<div class="flex flex-col gap-2">
-<div class="flex items-center justify-between font-label-md text-label-md">
-<span class="text-primary font-bold">27 spots remaining</span>
-<span class="text-on-surface-variant font-medium">73 claimed of 100 total allocation</span>
-</div>
-<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
-<div class="bg-secondary h-3 rounded-full w-[73%] transition-all"></div>
-</div>
-</div>
-<!-- Included Features Checklist -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-2">
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Unlimited Roast &amp; Pro Advisor chat queries</span>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Full Zerodha + INDmoney + Gmail real-time sync</span>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Daily Safe-to-Spend Radar &amp; lifestyle alert engine</span>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Real-time asset allocation drift checks &amp; alerts</span>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Roast, Pro &amp; Zen persona modes included</span>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Priority access to direct WhatsApp conversational bot</span>
-</div>
-</div>
-<!-- Action Section -->
-<div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
-<a class="w-full sm:w-auto flex-1 h-13 px-8 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm" href="#claim-alpha">
-<span>Lock in ₹99/mo</span>
-<span class="material-symbols-outlined text-base">arrow_forward</span>
-</a>
-<span class="font-body-sm text-body-sm text-on-surface-variant flex flex-wrap items-center gap-x-2 gap-y-1">
-<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">verified_user</span> Instant verification link</span>
-<span class="text-outline">·</span>
-<a class="text-secondary font-semibold hover:underline" href="mailto:hello@prasthana.in?subject=Waitlist%20Rs%2099">or email hello@prasthana.in</a>
-</span>
-</div>
-</div>
-</div>
-</section>
-</div>
-</main>
-<footer class="w-full bg-surface-container-low shadow-[0_-1px_12px_rgba(0,0,0,0.02)]">
-<div class="max-w-7xl mx-auto px-6 lg:px-12 pt-space-xl pb-space-lg">
-<div class="bg-surface-container rounded-xl p-6 lg:p-8 mb-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-[0_4px_20px_rgba(30,27,75,0.04)] scroll-reveal" id="waitlist">
-<div class="max-w-xl">
-<div class="inline-flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Exclusive Founding Cohort</span></div>
-<h4 class="font-headline-md text-headline-md text-primary mb-1">Lock Your Founding Member Rate</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Join 8,400+ early investors on the waitlist. The first 100 lock Rs 99/mo — forever — for chat-first wealth intelligence with Roast, Pro &amp; Zen personas.</p>
-</div>
-<div class="w-full md:w-auto flex flex-col sm:flex-row gap-space-xs items-stretch">
-<form class="flex flex-col sm:flex-row gap-space-xs" onsubmit="waitlistCompose(this); return false;">
-<input class="h-12 px-4 rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none min-w-[260px] shadow-sm" name="waitlistEmail" placeholder="Enter your Gmail or work email" required type="email"/>
-<button class="h-12 px-6 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap" type="submit"><span>Join Priority Waitlist</span><span class="material-symbols-outlined text-base">arrow_forward</span></button>
-</form>
-</div>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-space-lg mb-space-xl scroll-reveal delay-100">
-<div class="col-span-2">
-<div class="flex items-center gap-space-sm mb-4"><div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 shadow-sm bg-[#ff1493]/10 flex items-center justify-center"><img alt="yomo mascot logo" class="w-full h-full object-contain" src="assets/mascot.png"/></div><span class="font-headline-md text-headline-md font-extrabold text-primary">yomo</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed uppercase tracking-wider font-bold">AI</span></div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">Chat-first AI money app for Indian Gen Z. Syncs Gmail, Zerodha &amp; INDmoney read-only, then answers your money questions in chat — with Roast, Pro and Zen personas. Built by Prasthana.</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Prefer plain email? <a class="text-secondary font-semibold hover:underline" href="mailto:hello@prasthana.in">hello@prasthana.in</a></p>
-<div class="flex items-center gap-space-sm flex-wrap"><div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-sm text-on-tertiary-container">verified_user</span><span class="font-label-sm text-label-sm font-semibold">256-bit AES Vault</span></div><div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-sm text-secondary">account_balance</span><span class="font-label-sm text-label-sm font-semibold">Account Aggregator Sync</span></div></div>
-</div>
-<div>
-<div class="font-label-lg text-label-lg text-primary font-bold uppercase tracking-wider mb-4">Product Pillars</div>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html#features">Portfolio Roast AI</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html#features">Pro Alpha Optimizer</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html#features">X-Ray MF &amp; Equity Scan</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html#features">Safe-to-Spend Radar</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html#personas">Roast / Pro / Zen Modes</a></li>
-</ul>
-</div>
-<div>
-<div class="font-label-lg text-label-lg text-primary font-bold uppercase tracking-wider mb-4">Platform</div>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html#how-it-works">How It Works</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html#personas">Investor Personas</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing — Rs 99/mo Founding Plan</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="security.html">Security &amp; Privacy Hub</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Yomo</a></li>
-</ul>
-</div>
-<div>
-<div class="font-label-lg text-label-lg text-primary font-bold uppercase tracking-wider mb-4">Contact &amp; Trust</div>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="mailto:hello@prasthana.in">hello@prasthana.in</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="mailto:hello@prasthana.in?subject=Waitlist">Join the Waitlist</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="security.html#data-deletion">Data Deletion Request</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="security.html#faq">Security FAQ</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="pricing.html#faq">Pricing FAQ</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-space-lg bg-surface-container-high/40 rounded-xl p-6 scroll-reveal delay-200">
-<div class="flex items-start gap-3 mb-4"><span class="material-symbols-outlined text-secondary text-lg mt-0.5">shield_with_heart</span>
-<div><h5 class="font-label-lg text-label-lg text-primary font-bold mb-1">Legal &amp; Compliance Disclosure</h5>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Yomo by Prasthana is a chat-first money analytics and intelligence tool with a non-custodial, read-only architecture. Yomo is not a SEBI-registered investment adviser and does not sell investment products. Insights generated by the Roast, Pro and Zen personas are informational analytics — not personalized investment advice. Data retrieval via the RBI-regulated Account Aggregator framework is read-only, encrypted and strictly consent-driven, and can be revoked instantly from your bank app. Mutual fund investments are subject to market risks; please read all scheme-related documents carefully before investing.</p></div></div>
-<div class="flex flex-col sm:flex-row items-center justify-between pt-4 gap-4">
-<p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 Yomo · a Prasthana product. <span class="font-semibold text-primary">Yomo - made in India</span>.</p>
-<div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span>Read-Only Sync</span><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>RBI AA Ecosystem</span></div>
-</div>
-</div>
-</div>
-</footer>
-<script>
-    // Mobile hamburger menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.toggle('hidden');
-        menuToggle.setAttribute('aria-expanded', String(!isHidden));
-        menuIcon.textContent = isHidden ? 'menu' : 'close';
-      });
-      mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuIcon.textContent = 'menu';
-      }));
-    }
-
-    // Footer waitlist — no backend, open a pre-filled mailto compose
-    function waitlistCompose(form) {
-      const email = form.waitlistEmail.value.trim();
-      const subject = encodeURIComponent('Waitlist');
-      const body = encodeURIComponent('Hey Yomo, add me to the founding-member waitlist.\nEmail: ' + email);
-      window.location.href = 'mailto:hello@prasthana.in?subject=' + subject + '&body=' + body;
-    }
-
-    // IntersectionObserver for Fluid Scroll Animations & 3D Card Tilt Initializer
-    document.addEventListener('DOMContentLoaded', () => {
-      const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale');
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0.12 });
-      revealElements.forEach(el => revealObserver.observe(el));
-
-      const tiltCards = document.querySelectorAll('.tilt-card');
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (!prefersReducedMotion) {
-        tiltCards.forEach(card => {
-          const glare = document.createElement('div');
-          glare.className = 'tilt-glare';
-          card.appendChild(glare);
-          let rafId = null;
-          card.addEventListener('mousemove', (e) => {
-            if (rafId) cancelAnimationFrame(rafId);
-            rafId = requestAnimationFrame(() => {
-              const rect = card.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              const centerX = rect.width / 2;
-              const centerY = rect.height / 2;
-              const rotateX = ((y - centerY) / centerY) * -9.5;
-              const rotateY = ((x - centerX) / centerX) * 9.5;
-              card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
-              card.style.boxShadow = `0 20px 38px -10px rgba(30, 27, 75, 0.16)`;
-              const glarePercentX = (x / rect.width) * 100;
-              const glarePercentY = (y / rect.height) * 100;
-              glare.style.opacity = '1';
-              glare.style.background = `radial-gradient(circle at ${glarePercentX}% ${glarePercentY}%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 65%)`;
-            });
-          });
-          card.addEventListener('mouseleave', () => {
-            if (rafId) cancelAnimationFrame(rafId);
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-            card.style.boxShadow = '';
-            glare.style.opacity = '0';
-          });
-        });
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        surface: "#f8f9fb",
+        "surface-dim": "#d9dadc",
+        "surface-bright": "#f8f9fb",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f4f6",
+        "surface-container": "#edeef0",
+        "surface-container-high": "#e7e8ea",
+        "surface-container-highest": "#e1e2e4",
+        "on-surface": "#191c1e",
+        "on-surface-variant": "#46464d",
+        "inverse-surface": "#2e3132",
+        "inverse-on-surface": "#f0f1f3",
+        hairline: "#e8eaef",
+        outline: "#77767e",
+        "outline-variant": "#c7c5ce",
+        primary: "#050722",
+        "on-primary": "#ffffff",
+        "primary-container": "#1c1f3a",
+        "on-primary-container": "#8486a7",
+        secondary: "#595e72",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#dde1fa",
+        "on-secondary-container": "#5f6478",
+        tertiary: "#000e05",
+        "tertiary-container": "#002813",
+        "on-tertiary-container": "#0f9d5d",
+        error: "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error-container": "#93000a",
+        "primary-fixed": "#dfe0ff",
+        "primary-fixed-dim": "#c2c4e7",
+        "on-primary-fixed": "#161934",
+        "secondary-fixed": "#dde1fa",
+        "secondary-fixed-dim": "#c1c5dd",
+        "tertiary-fixed": "#82fab0",
+        "tertiary-fixed-dim": "#65dd96",
+        magenta: "#e6007e",
+        prosperity: "#1fa463"
+      },
+      borderRadius: {
+        sm: "0.25rem",
+        DEFAULT: "0.5rem",
+        md: "0.75rem",
+        lg: "1rem",
+        xl: "1.5rem",
+        full: "9999px"
+      },
+      spacing: {
+        gutter: "1rem",
+        "gutter-mobile": "0.75rem",
+        margin: "1.25rem",
+        "margin-mobile": "1rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2rem"
+      },
+      fontFamily: {
+        display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        headline: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        body: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        label: ["Plus Jakarta Sans", "system-ui", "sans-serif"]
+      },
+      fontSize: {
+        "display-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }],
+        "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "600" }],
+        "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }],
+        "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+        "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "400" }],
+        "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "600" }],
+        "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }],
+        "currency-hero": ["34px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "currency-card": ["20px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }]
+      },
+      boxShadow: {
+        soft: "0 4px 20px rgba(5,7,34,0.04)",
+        lift: "0 20px 36px -12px rgba(16,18,34,0.08), 0 1px 3px rgba(0,0,0,0.03)"
       }
-    });
-  </script>
+    }
+  }
+};
+</script>
+<noscript><style>.rise{opacity:1;transform:none}</style></noscript>
+</head>
+<body class="bg-surface font-body text-body-md text-on-surface antialiased">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-hairline">
+  <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
+    <a class="flex items-center gap-3 group" href="index.html" aria-label="Yomo home">
+      <span class="w-9 h-9 rounded-xl overflow-hidden bg-surface-container-low border border-hairline shadow-[0_2px_8px_rgba(5,7,34,0.06)] flex items-center justify-center shrink-0">
+        <img src="assets/mascot.png" alt="Yomo mascot" class="w-full h-full object-cover"/>
+      </span>
+      <span class="flex flex-col">
+        <span class="font-headline text-headline-sm text-primary tracking-tight font-bold leading-none">Yomo</span>
+        <span class="font-label text-[10px] text-secondary uppercase tracking-widest font-semibold mt-0.5">Finance</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+        <a class="font-body-md text-body-md text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full" href="index.html">Home</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#how-it-works">How it works</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#features">Features</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="pricing.html">Pricing</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="security.html">Security</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="about.html">About</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a class="inline-flex items-center gap-2 h-10 px-4 rounded-lg bg-primary-container text-on-primary font-label text-label-lg hover:bg-primary transition-colors" href="#request">
+        Request invite
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden w-10 h-10 rounded-lg border border-hairline flex items-center justify-center text-primary hover:bg-surface-container transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-hairline">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+        <a class="px-3 py-3 rounded-lg font-label-md text-label-md text-primary font-semibold bg-surface-container" href="index.html">Home</a>
+        <a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" href="index.html#how-it-works">How it works</a>
+        <a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" href="index.html#features">Features</a>
+        <a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" href="pricing.html">Pricing</a>
+        <a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" href="security.html">Security</a>
+        <a class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w-full pt-20">
+  <!-- Status strip -->
+  <section class="w-full max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-3">
+    <div class="flex items-center justify-between flex-wrap gap-4">
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#ecfdf5] border border-[#a7f3d0]/60">
+        <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+        <span class="font-label text-[11px] tracking-wide text-[#047857] uppercase font-bold">Private beta for India · invite only</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-3 text-secondary font-label text-label-sm">
+        <span class="flex items-center gap-1.5 font-medium"><svg class="w-4 h-4 text-[#047857]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> Zero bank credentials</span>
+        <span class="text-outline-variant">•</span>
+        <span class="font-medium">Bank alerts from 21 Indian banks</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="w-full max-w-7xl mx-auto px-6 lg:px-12 pt-6 pb-20 relative">
+    <div class="absolute -top-16 left-1/4 w-[540px] h-[540px] rounded-full bg-gradient-to-tr from-[#fef08a]/35 via-[#e0e7ff]/30 to-transparent blur-3xl -z-10 pointer-events-none glow-pulse"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <div class="lg:col-span-7 flex flex-col items-start">
+        <h1 class="font-display text-[42px] leading-[48px] lg:text-[58px] lg:leading-[64px] text-primary tracking-[-0.035em] font-extrabold">
+          Money makes sense when your assistant
+          <span class="relative inline-block whitespace-nowrap"><span class="relative z-10">actually reads</span><span class="absolute bottom-1.5 left-0 w-full h-3.5 bg-[#fef08a] -z-0 rounded-sm"></span></span>
+          the numbers.
+        </h1>
+        <p class="mt-6 font-body text-[17px] leading-[26px] text-secondary max-w-2xl">
+          Yomo reads the bank alerts already sitting in your Gmail, the statements you forward, and — on Android — the bank SMS on your phone. Then it answers what you can spend, what you owe and where the money went. No bank logins. No OTPs. No spam.
+        </p>
+
+        <div class="mt-8 flex items-start gap-4 p-4 lg:p-5 rounded-2xl bg-surface-container-lowest border border-hairline shadow-soft max-w-xl w-full relative">
+          <div class="relative shrink-0 mascot-float">
+            <div class="absolute inset-0 rounded-2xl bg-[#e6007e]/15 blur-md -z-10"></div>
+            <div class="w-20 h-20 rounded-2xl bg-surface-container-low border border-hairline p-1.5 flex items-center justify-center overflow-hidden">
+              <img alt="Yomo assistant" class="w-full h-full object-cover rounded-xl" src="assets/mascot.png"/>
+            </div>
+            <span class="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#10b981] ring-2 ring-white">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+            </span>
+          </div>
+          <div class="flex flex-col flex-1 pl-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-label text-[12px] text-primary uppercase font-bold tracking-wider">Yomo pulse</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#ecfdf5] text-[#047857] font-bold border border-[#a7f3d0]/60">Illustrative</span>
+            </div>
+            <p class="font-body text-body-md text-primary leading-relaxed">
+              "Safe to spend today <span class="font-semibold tnum text-primary bg-[#fef9c3]/70 px-1 py-0.5 rounded">₹1,180</span>. Netflix <span class="font-semibold tnum text-primary">₹799</span> tomorrow. Goa trip savings 62% done."
+            </p>
+            <div class="mt-2 flex items-center gap-3 text-[11px] text-secondary font-medium">
+              <span class="flex items-center gap-1 text-[#047857]"><span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span> Read-only feed</span>
+              <span class="text-outline-variant">•</span>
+              <span>Every number computed in the app</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col gap-2 w-full max-w-lg" id="request">
+          <form class="flex flex-col sm:flex-row items-stretch gap-3 w-full" data-waitlist data-subject="Yomo invite request" data-plan="Free">
+        <input class="flex-1 h-14 px-4 bg-surface-container-lowest text-primary placeholder:text-secondary rounded-xl font-body text-body-md border border-hairline focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Enter your email" type="email" required aria-label="Your email"/>
+        <button class="h-14 px-7 rounded-xl bg-primary-container text-on-primary font-label text-label-lg hover:bg-primary transition-all shadow-[0_4px_16px_rgba(16,18,34,0.18)] hover:-translate-y-0.5 flex items-center justify-center gap-2 btn-shimmer" type="submit">
+          Request invite
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+      </form>
+      <p data-sent class="hidden mt-2 font-body text-body-sm text-[#047857]">Your mail app is opening with the request ready — send it and we'll reply from hello@prasthana.in.</p>
+        </div>
+        <div class="mt-3 flex items-center gap-3 text-secondary font-body text-body-sm">
+          <span>Not ready yet?</span>
+          <a class="text-primary font-semibold hover:underline inline-flex items-center gap-1 transition-colors" href="#how-it-works">
+            See how it reads your data
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative">
+        <div class="absolute -top-12 -right-8 w-80 h-80 rounded-full bg-[#fef9c3]/50 blur-3xl -z-10"></div>
+        <div class="absolute -bottom-8 -left-8 w-80 h-80 rounded-full bg-[#eef2ff]/70 blur-3xl -z-10"></div>
+        <div class="flex flex-col gap-4">
+          <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-soft border border-hairline">
+            <div class="flex items-center justify-between pb-3 border-b border-hairline">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-pulse"></span>
+                <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Ledger chat · example</span>
+              </div>
+              <span class="font-body text-body-sm text-secondary tnum font-medium">11:42 AM</span>
+            </div>
+            <div class="flex justify-end mt-4 mb-3">
+              <div class="bg-surface-container-low text-primary rounded-2xl rounded-tr-none px-4 py-2.5 max-w-[85%] font-body text-body-md">
+                Can I afford dinner out at Bastian this weekend?
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-surface-container-low border border-hairline shrink-0 p-0.5 overflow-hidden">
+                <img alt="Yomo" class="w-full h-full object-cover rounded-lg" src="assets/mascot.png"/>
+              </div>
+              <div class="bg-surface-container-lowest rounded-2xl rounded-tl-none p-4 font-body text-body-md text-primary border border-hairline flex-1">
+                <p class="leading-relaxed">Safe to spend today is <span class="font-semibold tnum">₹1,180</span>. Payday is the 25th — 6 days away. That leaves <span class="font-semibold text-[#047857] tnum">₹3,400</span> of weekend headroom once the pending electricity bill (<span class="tnum font-medium">₹1,420</span>) is set aside.</p>
+                <div class="mt-2.5 pt-2 border-t border-hairline flex items-center justify-between text-body-sm text-secondary">
+                  <span>From 2 bank feeds</span>
+                  <span class="text-[#047857] font-semibold flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Verified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-soft border border-hairline">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Pacing engine</span>
+                <h2 class="font-headline text-headline-sm text-primary font-bold">Daily discretionary runway</h2>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-[#ecfdf5] border border-[#a7f3d0]/60 text-[#047857] font-label text-label-sm font-bold tnum whitespace-nowrap">₹475 / day</span>
+            </div>
+            <div class="grid grid-cols-3 gap-3 pt-1">
+              <div class="p-3.5 rounded-xl bg-surface-container-low border border-hairline">
+                <span class="font-body text-body-sm text-secondary block">Cycle start</span>
+                <span class="font-currency-card text-currency-card text-primary tnum font-bold">₹68,500</span>
+                <span class="text-[11px] text-secondary font-medium">Nov 01</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-surface-container-low border border-hairline">
+                <span class="font-body text-body-sm text-secondary block">Spent so far</span>
+                <span class="font-currency-card text-currency-card text-primary tnum font-bold">₹41,200</span>
+                <span class="text-[11px] text-[#e53935] font-semibold">60.1% cycle</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-[#ecfdf5] border border-[#a7f3d0]/80">
+                <span class="font-body text-body-sm text-[#047857] block font-medium">Safe to spend</span>
+                <span class="font-currency-card text-currency-card text-[#047857] tnum font-extrabold">₹12,450</span>
+                <span class="text-[11px] text-[#047857] font-semibold">6 days left</span>
+              </div>
+            </div>
+            <div class="mt-3.5 p-3 rounded-xl bg-surface-container-low border border-hairline flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="w-2 h-2 rounded-full bg-[#e11d48] animate-ping"></span>
+                <span class="font-body text-body-sm text-primary">Upcoming: <strong class="font-semibold">Netflix India</strong></span>
+              </div>
+              <span class="font-body text-body-sm font-bold text-primary tnum">₹799 · 26 Nov</span>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-soft border border-hairline">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-[#f3e8ff] text-[#7e22ce] flex items-center justify-center"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg></span>
+                <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Old vs new regime</span>
+              </div>
+              <span class="font-label text-label-sm text-[#047857] font-bold bg-[#ecfdf5] border border-[#a7f3d0]/60 px-2.5 py-0.5 rounded-full">Pro</span>
+            </div>
+            <div class="mt-3 flex items-center justify-between bg-surface-container-low p-3.5 rounded-xl border border-hairline gap-3">
+              <div>
+                <span class="font-body text-[12px] text-secondary block font-medium">On ₹18.4L CTC</span>
+                <span class="font-headline text-headline-sm text-primary font-extrabold">New regime saves <span class="text-[#047857] tnum">₹41,912</span></span>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="font-body text-[12px] text-secondary block font-medium">Computed from</span>
+                <span class="font-label text-label-md text-primary font-bold">your salary facts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full max-w-7xl mx-auto px-6 lg:px-12"><div class="w-full h-px bg-hairline"></div></div>
+
+  <!-- How it works -->
+  <section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-24" id="how-it-works">
+    <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16 rise">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fef9c3] border border-[#fde047]/60 text-primary mb-3">
+        <span class="font-label text-label-sm uppercase font-bold tracking-wider">Read-only, all the way down</span>
+      </div>
+      <h2 class="font-headline text-[32px] leading-[40px] text-primary font-extrabold tracking-tight">Three steps. No bank password.</h2>
+      <p class="font-body text-body-lg text-secondary mt-3">
+        Yomo never logs into your bank. It reads the alerts and documents that already reach you — and only the ones you point it at.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-surface-container-lowest rounded-2xl p-8 border border-hairline shadow-soft flex flex-col justify-between rise">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-surface-container-low border border-hairline flex items-center justify-center text-primary mb-6"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Step 01</span>
+          <h3 class="font-headline text-headline-sm text-primary mt-1 mb-3 font-bold">You connect a read-only feed</h3>
+          <p class="font-body text-body-md text-secondary leading-relaxed">
+            Gmail bank alerts through Google's read-only OAuth, a private forwarding address at <span class="text-primary font-semibold">goyomo.in</span>, statement PDFs and CSVs you upload, or the Android app's on-device SMS reader.
+          </p>
+        </div>
+        <div class="mt-6 p-3.5 bg-surface-container-low rounded-xl border border-hairline">
+          <div class="flex items-center gap-2 text-body-sm text-secondary">
+            <span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+            <span class="font-mono text-primary font-semibold text-xs">you@goyomo.in</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-8 border border-hairline shadow-soft flex flex-col justify-between rise rise-1">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-[#ecfdf5] border border-[#a7f3d0]/60 flex items-center justify-center text-[#047857] mb-6"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+          <span class="font-label text-label-sm text-[#047857] uppercase font-bold tracking-wider">Step 02</span>
+          <h3 class="font-headline text-headline-sm text-primary mt-1 mb-3 font-bold">Yomo reads the numbers</h3>
+          <p class="font-body text-body-md text-secondary leading-relaxed">
+            It checks the sender, pulls out the amount, merchant and date in <span class="text-primary font-bold">₹</span>, and names Indian merchants like Swiggy, Blinkit or Third Wave. OTPs are dropped; alert text is stored encrypted and never handed to the language model.
+          </p>
+        </div>
+        <div class="mt-6 p-3.5 bg-surface-container-low rounded-xl border border-hairline flex items-center justify-between">
+          <span class="font-body text-body-sm text-secondary font-medium">OTPs retained</span>
+          <span class="font-label text-label-sm text-[#e53935] font-bold">none</span>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-8 border border-hairline shadow-soft flex flex-col justify-between rise rise-2">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-[#fef9c3] border border-[#fde047]/70 flex items-center justify-center text-primary mb-6"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
+          <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Step 03</span>
+          <h3 class="font-headline text-headline-sm text-primary mt-1 mb-3 font-bold">You ask, Yomo answers</h3>
+          <p class="font-body text-body-md text-secondary leading-relaxed">
+            "How much went to food this month?" "Can I afford Goa?" "Old regime or new?" Every figure is computed in the app from your own records and cited in rupees — never guessed by the model.
+          </p>
+        </div>
+        <div class="mt-6 p-3.5 bg-surface-container-low rounded-xl border border-hairline flex items-center justify-between">
+          <span class="font-body text-body-sm text-secondary font-medium">Voice</span>
+          <span class="font-label text-label-sm text-primary font-bold">Roast · Pro · Zen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="w-full bg-surface-container-low py-24 border-y border-hairline" id="features">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 rise">
+        <div>
+          <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Built for Indian money</span>
+          <h2 class="font-headline text-[32px] leading-[40px] text-primary font-extrabold mt-2 tracking-tight">Discipline without manual accounting.</h2>
+        </div>
+        <p class="font-body text-body-md text-secondary max-w-md">
+          Salary dates, UPI, credit-card cycles, CAS statements and two tax regimes — the parts of Indian money that spreadsheets never quite survive.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-surface-container-lowest rounded-2xl p-8 border border-hairline shadow-soft flex flex-col justify-between rise">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-10 h-10 rounded-xl bg-[#eef2ff] flex items-center justify-center text-primary border border-hairline"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+              <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Salary pacing</span>
+            </div>
+            <h3 class="font-headline text-headline-md text-primary font-bold">Safe to spend &amp; pacing</h3>
+            <p class="font-body text-body-md text-secondary mt-3 leading-relaxed">
+              One number you can trust: what is genuinely left after fixed bills, subscriptions and what you have already set aside — paced to your salary date, not the calendar month.
+            </p>
+          </div>
+          <div class="mt-8 p-4 rounded-xl bg-surface-container-low border border-hairline">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-body text-body-sm text-secondary font-medium">Remaining discretionary balance</span>
+              <span class="font-headline text-headline-sm text-primary font-bold tnum">₹14,250</span>
+            </div>
+            <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+              <div class="bg-primary-container h-full rounded-full" style="width: 68%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-2.5 font-body text-body-sm text-secondary">
+              <span>Day 19 of 30</span>
+              <span class="text-[#047857] font-bold tnum">₹1,295/day runway</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-8 border border-hairline shadow-soft flex flex-col justify-between rise rise-1">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-10 h-10 rounded-xl bg-[#ecfdf5] flex items-center justify-center text-[#047857] border border-[#a7f3d0]/60"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></span>
+              <span class="font-label text-label-sm text-[#047857] uppercase font-bold tracking-wider">Consolidated holdings</span>
+            </div>
+            <h3 class="font-headline text-headline-md text-primary font-bold">Portfolio &amp; net worth</h3>
+            <p class="font-body text-body-md text-secondary mt-3 leading-relaxed">
+              Mutual funds from a CAS statement, demat and NPS holdings, and broker positions from Zerodha, Groww and INDmoney — one net-worth line, no API keys you don't want to share.
+            </p>
+          </div>
+          <div class="mt-8 p-4 rounded-xl bg-surface-container-low border border-hairline flex flex-col gap-2.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#10b981]"></span><span class="font-body text-body-sm text-primary font-medium">Parag Parikh Flexi Cap</span></div>
+              <span class="font-body text-body-sm text-primary tnum font-bold">₹4,82,410</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#3b82f6]"></span><span class="font-body text-body-sm text-primary font-medium">Nifty 50 Index Direct</span></div>
+              <span class="font-body text-body-sm text-primary tnum font-bold">₹2,18,050</span>
+            </div>
+            <div class="pt-2 border-t border-hairline flex items-center justify-between text-body-sm text-secondary">
+              <span>Equity growth</span>
+              <span class="text-[#047857] font-bold tnum">+16.4% XIRR</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-8 border border-hairline shadow-soft flex flex-col justify-between rise">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-10 h-10 rounded-xl bg-[#fef9c3] flex items-center justify-center text-primary border border-[#fde047]/60"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg></span>
+              <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Pro plan</span>
+            </div>
+            <h3 class="font-headline text-headline-md text-primary font-bold">Old vs new tax regime</h3>
+            <p class="font-body text-body-md text-secondary mt-3 leading-relaxed">
+              A rupee comparison built on your actual salary, 80C and 80D deductions, HRA and the standard deduction — with the working shown, not a vague percentage.
+            </p>
+          </div>
+          <div class="mt-8 grid grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-xl bg-surface-container-low border border-hairline">
+              <span class="font-label text-label-sm text-secondary block font-medium">Old regime</span>
+              <span class="font-currency-card text-currency-card text-primary tnum font-bold">₹1,84,320</span>
+              <span class="font-body text-body-sm text-secondary mt-1 block">with 80C + 80D</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-[#ecfdf5] border border-[#a7f3d0]/80">
+              <span class="font-label text-label-sm text-[#047857] block font-medium">New regime</span>
+              <span class="font-currency-card text-currency-card text-[#047857] tnum font-extrabold">₹1,42,408</span>
+              <span class="font-body text-body-sm text-[#047857] font-bold mt-1 block">Saves ₹41,912</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-8 border border-hairline shadow-soft flex flex-col justify-between rise rise-1">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-10 h-10 rounded-xl bg-[#f3e8ff] flex items-center justify-center text-[#7e22ce] border border-[#d8b4fe]/60"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg></span>
+              <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Merchant intelligence</span>
+            </div>
+            <h3 class="font-headline text-headline-md text-primary font-bold">Auto-categorisation you can correct</h3>
+            <p class="font-body text-body-md text-secondary mt-3 leading-relaxed">
+              UPI narrations turn into real merchant names — Third Wave Coffee, Decathlon, Blinkit, Apollo Pharmacy. Every guess is yours to approve, change, or explain.
+            </p>
+          </div>
+          <div class="mt-8 flex flex-col gap-2.5 bg-surface-container-low p-3.5 rounded-xl border border-hairline">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-surface-container-lowest border border-hairline font-bold text-secondary">UPI</span>
+                <span class="font-body text-body-sm font-semibold text-primary">Third Wave Coffee</span>
+              </div>
+              <span class="font-body text-body-sm text-primary font-bold tnum">₹340.00</span>
+            </div>
+            <div class="flex items-center justify-between text-body-sm text-secondary pt-1 border-t border-hairline">
+              <div class="flex items-center gap-1.5">
+                <div class="w-4 h-4 rounded overflow-hidden shrink-0"><img alt="" class="w-full h-full object-cover" src="assets/mascot.png"/></div>
+                <span class="text-[12px] text-[#047857] font-medium">Dining · auto-confirmed</span>
+              </div>
+              <span class="text-[11px] text-primary font-bold underline">Change</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-24" id="privacy">
+    <div class="bg-surface-container-lowest rounded-3xl p-8 lg:p-14 border border-hairline shadow-soft relative overflow-hidden rise">
+      <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[#fef9c3]/40 blur-3xl pointer-events-none"></div>
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-surface-container-low border border-hairline mb-6">
+        <div class="w-6 h-6 rounded-lg overflow-hidden border border-hairline"><img alt="" class="w-full h-full object-cover" src="assets/mascot.png"/></div>
+        <span class="font-label text-label-sm text-primary uppercase font-bold tracking-wider">Read-only, always</span>
+      </div>
+      <h2 class="font-headline text-[32px] leading-[40px] text-primary font-extrabold max-w-2xl tracking-tight">
+        Yomo never moves money, never places orders, and never asks for a bank password or an OTP.
+      </h2>
+      <p class="font-body text-body-lg text-secondary mt-3 max-w-3xl leading-relaxed">
+        Most finance apps ask for a bank login, an aggregator consent or full SMS access. Yomo reads only the financial alerts and documents you connect, and it tells you exactly what it stores.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 pt-8 border-t border-hairline">
+        <div class="bg-surface-container-low p-6 lg:p-7 rounded-2xl border border-hairline">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-6 h-6 rounded-full bg-[#ecfdf5] border border-[#a7f3d0] text-[#047857] flex items-center justify-center"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></div>
+            <h3 class="font-headline text-headline-sm text-primary font-bold">What Yomo keeps</h3>
+          </div>
+          <ul class="flex flex-col gap-3 font-body text-body-md text-secondary">
+            <li class="flex items-start gap-2.5"><span class="text-primary font-bold leading-5">•</span><span>A payment ledger: merchant, date, amount in <span class="text-primary font-semibold">₹</span></span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary font-bold leading-5">•</span><span>Holdings from the CAS statements and broker reads you connect</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary font-bold leading-5">•</span><span>Budgets, goals and the nudges you set</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary font-bold leading-5">•</span><span>Alert text, encrypted at rest, so a transaction can be parsed and checked</span></li>
+          </ul>
+        </div>
+        <div class="bg-surface-container-low p-6 lg:p-7 rounded-2xl border border-hairline">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-6 h-6 rounded-full bg-[#fee2e2] border border-[#fca5a5] text-[#ef4444] flex items-center justify-center"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M6 6l12 12"/></svg></div>
+            <h3 class="font-headline text-headline-sm text-primary font-bold">What Yomo never keeps</h3>
+          </div>
+          <ul class="flex flex-col gap-3 font-body text-body-md text-secondary">
+            <li class="flex items-start gap-2.5"><span class="text-[#ef4444] font-bold leading-5">•</span><span>Bank passwords, PINs or UPI credentials</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-[#ef4444] font-bold leading-5">•</span><span>One-time passwords — discarded before anything is stored</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-[#ef4444] font-bold leading-5">•</span><span>Any authority to move money or place an order</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-[#ef4444] font-bold leading-5">•</span><span>Personal or marketing email outside the financial senders you connect</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 p-5 lg:p-6 rounded-2xl bg-surface-container-low border border-hairline flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-surface-container-lowest border border-hairline flex items-center justify-center text-primary shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg></div>
+          <div>
+            <h4 class="font-label text-label-lg text-primary font-bold">Your data is yours. Period.</h4>
+            <p class="font-body text-body-sm text-secondary">Export your ledger as CSV whenever you want, or delete everything from Settings — no email, no waiting.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <span class="text-[12px] font-bold text-[#047857] bg-[#ecfdf5] border border-[#a7f3d0]/80 px-3.5 py-1.5 rounded-xl flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Export &amp; delete in-app
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="w-full bg-surface-container py-24 px-6 lg:px-12" id="pricing">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-14 rise">
+        <span class="font-label text-label-sm uppercase tracking-wider text-secondary font-bold">Pricing</span>
+        <h2 class="font-headline text-[32px] leading-[40px] text-primary font-extrabold mt-2 tracking-tight">Start free. Pay when you want the whole picture.</h2>
+        <p class="font-body text-body-lg text-secondary mt-3">Three plans, monthly or yearly. Deleting your data, exporting it and correcting a transaction are never paid features.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div class="bg-surface-container-lowest rounded-2xl p-7 border border-hairline flex flex-col justify-between rise">
+          <div>
+            <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Free</span>
+            <div class="mt-3 flex items-baseline gap-1"><span class="font-headline text-[34px] leading-[40px] font-extrabold text-primary tnum">₹0</span><span class="font-body text-body-sm text-secondary">/ forever</span></div>
+            <p class="font-body text-body-md text-secondary mt-2">Enough to see whether the numbers land.</p>
+            <ul class="mt-6 flex flex-col gap-3 font-body text-body-md text-primary">
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#047857] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>5 questions a day, 30 days of history</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#047857] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>Safe-to-spend and budgets</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#047857] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>One goal and totals in the weekly digest</span></li>
+            </ul>
+          </div>
+          <a class="mt-8 h-12 rounded-xl border border-hairline bg-surface-container-lowest text-primary font-label text-label-lg flex items-center justify-center hover:bg-surface-container transition-colors" href="pricing.html">See what Free includes</a>
+        </div>
+        <div class="bg-primary-container text-on-primary rounded-2xl p-7 border border-white/10 flex flex-col justify-between shadow-lift relative overflow-hidden rise rise-1">
+          <div class="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#fde047]/15 blur-3xl pointer-events-none"></div>
+          <div class="relative">
+            <div class="flex items-center justify-between">
+              <span class="font-label text-label-sm text-tertiary-fixed uppercase font-bold tracking-wider">Plus</span>
+              <span class="font-label text-[10px] px-2 py-0.5 rounded-full bg-white/10 border border-white/15 text-[#82fab0] uppercase tracking-wider font-bold">Most people</span>
+            </div>
+            <div class="mt-3 flex items-baseline gap-1"><span class="font-headline text-[34px] leading-[40px] font-extrabold tnum">₹399</span><span class="font-body text-body-sm text-on-primary-container">/ month</span></div>
+            <p class="font-body text-body-sm text-on-primary-container mt-1">or ₹3,990 a year — two months free</p>
+            <ul class="mt-6 flex flex-col gap-3 font-body text-body-md">
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#82fab0] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>Unlimited chat and full history</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#82fab0] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>The leak list — every merchant behind the spend</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#82fab0] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>Portfolio depth: holdings, XIRR, drift</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#82fab0] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>Every alert, the spend map and the full weekly story</span></li>
+            </ul>
+          </div>
+          <a class="mt-8 h-12 rounded-xl bg-[#82fab0] text-[#00210f] font-label text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-[#65dd96] transition-colors" href="pricing.html#plans">Choose Plus <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-7 border border-hairline flex flex-col justify-between rise rise-2">
+          <div>
+            <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Pro</span>
+            <div class="mt-3 flex items-baseline gap-1"><span class="font-headline text-[34px] leading-[40px] font-extrabold text-primary tnum">₹899</span><span class="font-body text-body-sm text-secondary">/ month</span></div>
+            <p class="font-body text-body-sm text-secondary mt-1">or ₹7,999 a year</p>
+            <ul class="mt-6 flex flex-col gap-3 font-body text-body-md text-primary">
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#047857] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>Everything in Plus</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#047857] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>Old vs new tax pack, with the working shown</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-[#047857] mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span>What-if planner and unlimited accounts</span></li>
+            </ul>
+          </div>
+          <a class="mt-8 h-12 rounded-xl border border-hairline bg-surface-container-lowest text-primary font-label text-label-lg flex items-center justify-center hover:bg-surface-container transition-colors" href="pricing.html#plans">Choose Pro</a>
+        </div>
+      </div>
+      <p class="font-body text-body-sm text-secondary text-center mt-6">Plans are activated by hand during the beta — request one and we'll set it up. Cancel anytime.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="w-full max-w-4xl mx-auto px-6 lg:px-12 py-20" id="faq">
+    <div class="text-center mb-12 rise">
+      <span class="font-label text-label-sm text-secondary uppercase font-bold tracking-wider">Questions</span>
+      <h2 class="font-headline text-[32px] leading-[40px] text-primary font-extrabold mt-2 tracking-tight">The ones people actually ask</h2>
+    </div>
+    <div class="flex flex-col gap-4">
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 border border-hairline shadow-soft rise">
+        <summary class="flex items-center justify-between cursor-pointer select-none gap-4">
+          <h3 class="font-headline text-[17px] text-primary font-bold">How does Yomo read my bank data without my bank password?</h3>
+          <span class="w-7 h-7 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center chev text-secondary"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></span>
+        </summary>
+        <p class="mt-4 font-body text-body-md text-secondary leading-relaxed pt-4 border-t border-hairline">
+          Four read-only lanes: your Gmail bank alerts through Google's read-only OAuth, a private forwarding address on <span class="text-primary font-semibold">goyomo.in</span> that you point bank emails at, statement PDFs and CSVs you upload or share, and — on Android — an on-device reader that only sends messages from allowlisted bank senders. No bank login, no OTP, and no screen scraping at any point.
+        </p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 border border-hairline shadow-soft rise">
+        <summary class="flex items-center justify-between cursor-pointer select-none gap-4">
+          <h3 class="font-headline text-[17px] text-primary font-bold">Can Yomo move money or place orders?</h3>
+          <span class="w-7 h-7 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center chev text-secondary"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></span>
+        </summary>
+        <p class="mt-4 font-body text-body-md text-secondary leading-relaxed pt-4 border-t border-hairline">
+          Never. There is no payment, transfer or order-placement code in the product. It cannot reach a UPI switch, a bank API or a broker's order endpoint. Yomo is an analytical observer — it reads numbers and explains them.
+        </p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 border border-hairline shadow-soft rise">
+        <summary class="flex items-center justify-between cursor-pointer select-none gap-4">
+          <h3 class="font-headline text-[17px] text-primary font-bold">Which banks and brokers work today?</h3>
+          <span class="w-7 h-7 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center chev text-secondary"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></span>
+        </summary>
+        <p class="mt-4 font-body text-body-md text-secondary leading-relaxed pt-4 border-t border-hairline">
+          Bank alerts are recognised from 21 Indian banks — HDFC, ICICI, SBI, Axis, Kotak, PNB, Bank of Baroda, IDBI, IndusInd, Yes, Canara, Union, Federal, IDFC First, AU, Bank of India, Indian Overseas, UCO, Indian, Central and Standard Chartered. Statement files parse for HDFC, ICICI, SBI, Axis, Kotak and Standard Chartered plus credit-card statements, and CAS from CAMS/KFintech, NSDL and CDSL. Broker reads cover Zerodha, Groww and INDmoney.
+        </p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 border border-hairline shadow-soft rise">
+        <summary class="flex items-center justify-between cursor-pointer select-none gap-4">
+          <h3 class="font-headline text-[17px] text-primary font-bold">Do I have to give Yomo my phone's SMS access?</h3>
+          <span class="w-7 h-7 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center chev text-secondary"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></span>
+        </summary>
+        <p class="mt-4 font-body text-body-md text-secondary leading-relaxed pt-4 border-t border-hairline">
+          Only if you want the Android app to catch UPI spends as they happen — and then only messages from allowlisted bank senders are read. Personal SMS and OTPs never leave the phone. The web app works without any SMS access at all.
+        </p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 border border-hairline shadow-soft rise">
+        <summary class="flex items-center justify-between cursor-pointer select-none gap-4">
+          <h3 class="font-headline text-[17px] text-primary font-bold">How do I export or delete everything?</h3>
+          <span class="w-7 h-7 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center chev text-secondary"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></span>
+        </summary>
+        <p class="mt-4 font-body text-body-md text-secondary leading-relaxed pt-4 border-t border-hairline">
+          Both live in Settings. The CSV export is immediate; "Delete my data" permanently removes your transactions, holdings, chat history and connected feeds. Server backups roll off within 14 days. If you would rather ask a human, <a class="text-primary font-semibold underline" href="mailto:hello@prasthana.in?subject=Data%20Deletion%20Request">email hello@prasthana.in</a> and we'll confirm in writing.
+        </p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 border border-hairline shadow-soft rise">
+        <summary class="flex items-center justify-between cursor-pointer select-none gap-4">
+          <h3 class="font-headline text-[17px] text-primary font-bold">Is this investment advice?</h3>
+          <span class="w-7 h-7 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center chev text-secondary"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></span>
+        </summary>
+        <p class="mt-4 font-body text-body-md text-secondary leading-relaxed pt-4 border-t border-hairline">
+          No. Yomo is not a SEBI-registered investment adviser, does not sell or distribute investment products, and takes no commission from anyone. Roast, Pro and Zen are three ways of explaining your own numbers — analytics and education, not personalised advice.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-16">
+    <div class="rounded-3xl bg-primary-container text-on-primary p-8 lg:p-16 relative overflow-hidden shadow-lift border border-white/10">
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#fde047]/15 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-[#65dd96]/15 blur-3xl pointer-events-none"></div>
+      <div class="relative z-10 max-w-2xl">
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-[#82fab0] mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#82fab0] animate-pulse"></span>
+          <span class="font-label text-label-sm uppercase font-bold tracking-wider">Private beta · invite only</span>
+        </div>
+        <h2 class="font-display text-[36px] leading-[44px] lg:text-[48px] lg:leading-[56px] font-extrabold text-on-primary tracking-tight">Ready for clear money math?</h2>
+        <p class="mt-4 font-body text-body-lg text-on-primary-container max-w-xl leading-relaxed">
+          Get the whole picture — runway, investments and taxes in rupees — without handing over a bank password.
+        </p>
+        <div class="mt-8 max-w-md">
+          <form class="flex flex-col sm:flex-row items-stretch gap-3 w-full" data-waitlist data-subject="Yomo invite request — site CTA" data-plan="Free">
+        <input class="flex-1 h-14 px-4 bg-surface-container-lowest text-primary placeholder:text-secondary rounded-xl font-body text-body-md border border-hairline focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Enter your email" type="email" required aria-label="Your email"/>
+        <button class="h-14 px-7 rounded-xl bg-primary-container text-on-primary font-label text-label-lg hover:bg-primary transition-all shadow-[0_4px_16px_rgba(16,18,34,0.18)] hover:-translate-y-0.5 flex items-center justify-center gap-2 btn-shimmer" type="submit">
+          Request invite
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+      </form>
+      <p data-sent class="hidden mt-2 font-body text-body-sm text-[#047857]">Your mail app is opening with the request ready — send it and we'll reply from hello@prasthana.in.</p>
+        </div>
+        <p class="mt-4 font-body text-body-sm text-on-primary-container/80">Read-only by design · 21 bank alert formats · no credit card to start</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="w-full bg-surface-container-lowest border-t border-hairline mt-space-xl">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12">
+      <div class="lg:col-span-2 flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-xl overflow-hidden bg-surface-container-low border border-hairline flex items-center justify-center shrink-0">
+            <img src="assets/mascot.png" alt="Yomo mascot" class="w-full h-full object-cover"/>
+          </span>
+          <span class="font-headline text-headline-sm text-primary font-bold tracking-tight">Yomo</span>
+        </div>
+        <p class="font-body text-body-md text-on-surface-variant max-w-sm leading-relaxed">
+          A read-only money assistant for India. It reads the alerts and statements you already have, then answers what you can spend, what you owe and where it went — in plain rupees.
+        </p>
+        <div class="flex items-center gap-2 font-label text-label-sm text-on-surface-variant">
+          <span class="w-1.5 h-1.5 rounded-full bg-prosperity"></span>
+          <span>Read-only by design · no bank credentials</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-label-md text-primary font-bold">Product</span>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#features">Safe to spend</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#features">Portfolio &amp; net worth</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#features">Tax comparison</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#how-it-works">How it reads your data</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-label-md text-primary font-bold">Company</span>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Yomo</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="security.html">Security &amp; privacy</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:hello@prasthana.in">Contact</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-label-md text-primary font-bold">Trust</span>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="security.html#data-deletion">Delete my data</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="security.html#faq">Security FAQ</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="pricing.html#faq">Billing FAQ</a>
+        <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:hello@prasthana.in?subject=Yomo%20invite%20request">Request an invite</a>
+      </div>
+    </div>
+    <div class="rounded-xl bg-surface-container-low border border-hairline p-6">
+      <h2 class="font-label text-label-lg text-primary font-bold mb-2">What Yomo is, and is not</h2>
+      <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">
+        Yomo is a read-only money analytics tool built by Prasthana. It cannot move money, place orders, hold funds or act on your accounts, and it never asks for a bank password or an OTP. Yomo is not a SEBI-registered investment adviser and does not sell investment products; its insights are informational, not personalised advice. Mutual fund investments are subject to market risks — read the scheme documents before investing.
+      </p>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mt-4 pt-4 border-t border-hairline">
+        <p class="font-body text-body-sm text-on-surface-variant">© 2026 Yomo · a Prasthana product · made in India</p>
+        <div class="flex items-center gap-4">
+          <a class="font-body text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:hello@prasthana.in">hello@prasthana.in</a>
+          <span class="w-px h-3 bg-hairline hidden sm:block"></span>
+          <span class="font-label text-label-sm text-on-surface-variant">Read-only sync</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
