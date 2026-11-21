@@ -134,6 +134,10 @@ html.dark [class~="ring-white"] { --tw-ring-color: rgb(var(--color-surface-conta
 html.dark .glow-pulse { opacity: .25; }
 html.dark [class~="from-[#fef08a]/35"] { --tw-gradient-from: rgb(101 80 32 / .18) var(--tw-gradient-from-position); }
 
+html:not(.dark) [data-icon-sun], html.dark [data-icon-moon] { display: none; }
+[data-theme-toggle] > span { transition: transform .2s ease, background-color .2s ease; }
+[data-theme-toggle]:active > span { transform: scale(.92); }
+
 :focus-visible { outline-offset: 3px; }
 
 @keyframes floatGentle {

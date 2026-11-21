@@ -14,8 +14,7 @@
     document.querySelectorAll('[data-theme-toggle]').forEach(function (button) {
       button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
       button.setAttribute('aria-pressed', String(dark));
-      button.querySelector('[data-theme-label]').textContent = dark ? 'Light mode' : 'Dark mode';
-      button.querySelector('[data-theme-icon]').textContent = dark ? '☀' : '☾';
+      button.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
     });
   }
   showTheme(savedTheme() === 'dark' || (!savedTheme() && systemTheme.matches));
