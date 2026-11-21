@@ -15,9 +15,12 @@ moved your way, magenta kept to micro-accents.
 """
 from __future__ import annotations
 
+from hashlib import sha256
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+CSS_VERSION = sha256((ROOT / "assets/site.css").read_bytes()).hexdigest()[:12]
+JS_VERSION = sha256((ROOT / "assets/site.js").read_bytes()).hexdigest()[:12]
 SITE = "https://meetyomo.in"
 MAIL = "hello@prasthana.in"
 
@@ -110,7 +113,7 @@ HEAD = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/site.css"/>
+<link rel="stylesheet" href="assets/site.css?v={css_version}"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <script id="tailwind-config">{tw}</script>
 <noscript><style>.rise{{opacity:1;transform:none}}</style></noscript>
@@ -234,14 +237,14 @@ FOOTER = f"""<footer class="w-full bg-surface-container-lowest border-t border-h
     </div>
   </div>
 </footer>
-<script src="assets/site.js" defer></script>
+<script src="assets/site.js?v={JS_VERSION}" defer></script>
 </body>
 </html>
 """
 
 
 def page(path: str, title: str, desc: str, active: str, body: str) -> str:
-    head = HEAD.format(title=title, desc=desc, site=SITE, path="/" + path if path != "index.html" else "/", tw=TW_CONFIG)
+    head = HEAD.format(title=title, desc=desc, site=SITE, path="/" + path if path != "index.html" else "/", tw=TW_CONFIG, css_version=CSS_VERSION)
     return head + header(active) + "\n" + body.strip() + "\n" + FOOTER
 
 
