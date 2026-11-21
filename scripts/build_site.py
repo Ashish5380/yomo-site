@@ -26,46 +26,20 @@ tailwind.config = {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        surface: "#f8f9fb",
-        "surface-dim": "#d9dadc",
-        "surface-bright": "#f8f9fb",
-        "surface-container-lowest": "#ffffff",
-        "surface-container-low": "#f3f4f6",
-        "surface-container": "#edeef0",
-        "surface-container-high": "#e7e8ea",
-        "surface-container-highest": "#e1e2e4",
-        "on-surface": "#191c1e",
-        "on-surface-variant": "#46464d",
-        "inverse-surface": "#2e3132",
-        "inverse-on-surface": "#f0f1f3",
-        hairline: "#e8eaef",
-        outline: "#77767e",
-        "outline-variant": "#c7c5ce",
-        primary: "#050722",
-        "on-primary": "#ffffff",
-        "primary-container": "#1c1f3a",
-        "on-primary-container": "#8486a7",
-        secondary: "#595e72",
-        "on-secondary": "#ffffff",
-        "secondary-container": "#dde1fa",
-        "on-secondary-container": "#5f6478",
-        tertiary: "#000e05",
-        "tertiary-container": "#002813",
-        "on-tertiary-container": "#0f9d5d",
-        error: "#ba1a1a",
-        "error-container": "#ffdad6",
-        "on-error-container": "#93000a",
-        "primary-fixed": "#dfe0ff",
-        "primary-fixed-dim": "#c2c4e7",
-        "on-primary-fixed": "#161934",
-        "secondary-fixed": "#dde1fa",
-        "secondary-fixed-dim": "#c1c5dd",
-        "tertiary-fixed": "#82fab0",
-        "tertiary-fixed-dim": "#65dd96",
-        magenta: "#e6007e",
-        prosperity: "#1fa463"
-      },
+      colors: Object.fromEntries([
+        "surface", "surface-dim", "surface-bright", "surface-container-lowest",
+        "surface-container-low", "surface-container", "surface-container-high",
+        "surface-container-highest", "on-surface", "on-surface-variant",
+        "inverse-surface", "inverse-on-surface", "hairline", "outline",
+        "outline-variant", "primary", "primary-hover", "on-primary",
+        "primary-container", "on-primary-container", "secondary", "on-secondary",
+        "secondary-container", "on-secondary-container", "tertiary",
+        "tertiary-container", "on-tertiary-container", "error",
+        "error-container", "on-error-container", "primary-fixed",
+        "primary-fixed-dim", "on-primary-fixed", "secondary-fixed",
+        "secondary-fixed-dim", "tertiary-fixed", "tertiary-fixed-dim",
+        "magenta", "prosperity"
+      ].map(name => [name, `rgb(var(--color-${name}) / <alpha-value>)`])),
       borderRadius: {
         sm: "0.25rem",
         DEFAULT: "0.5rem",
@@ -120,6 +94,7 @@ HEAD = """<!DOCTYPE html>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#f8f9fb"/>
+<script>try {{ if (localStorage.getItem('yomo-theme') === 'dark' || (!localStorage.getItem('yomo-theme') && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark'); }} catch (e) {{ if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark'); }}</script>
 <title>{title}</title>
 <meta name="description" content="{desc}"/>
 <link rel="canonical" href="{site}{path}"/>
@@ -184,7 +159,8 @@ def header(active: str) -> str:
         {nav_links(active)}
     </nav>
     <div class="flex items-center gap-3">
-      <a class="inline-flex items-center gap-2 h-10 px-4 rounded-lg bg-primary-container text-on-primary font-label text-label-lg hover:bg-primary transition-colors" href="#request">
+      <button data-theme-toggle type="button" class="hidden lg:inline-flex h-10 px-3 rounded-lg border border-hairline text-primary font-label text-label-md items-center gap-2 hover:bg-surface-container transition-colors" aria-label="Switch to dark mode" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span><span data-theme-label>Dark mode</span></button>
+      <a class="inline-flex items-center gap-2 h-10 px-4 rounded-lg bg-primary-container text-on-primary font-label text-label-lg hover:bg-primary-hover transition-colors" href="#request">
         Request invite
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -196,6 +172,7 @@ def header(active: str) -> str:
   <div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-hairline">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
         {nav_links(active, mobile=True)}
+        <button data-theme-toggle type="button" class="px-3 py-3 rounded-lg font-label-md text-label-md text-on-surface text-left hover:bg-surface-container transition-colors" aria-label="Switch to dark mode" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span> <span data-theme-label>Dark mode</span></button>
     </nav>
   </div>
 </header>

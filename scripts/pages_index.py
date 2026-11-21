@@ -7,7 +7,7 @@ def request_form(subject: str = "Yomo invite request", plan: str = "Free",
     h = "h-12" if compact else "h-14"
     return f"""<form class="flex flex-col sm:flex-row items-stretch gap-3 w-full" data-waitlist data-subject="{subject}" data-plan="{plan}">
         <input class="flex-1 {h} px-4 bg-surface-container-lowest text-primary placeholder:text-secondary rounded-xl font-body text-body-md border border-hairline focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Enter your email" type="email" required aria-label="Your email"/>
-        <button class="{h} px-7 rounded-xl bg-primary-container text-on-primary font-label text-label-lg hover:bg-primary transition-all shadow-[0_4px_16px_rgba(16,18,34,0.18)] hover:-translate-y-0.5 flex items-center justify-center gap-2 btn-shimmer" type="submit">
+        <button class="{h} px-7 rounded-xl bg-primary-container text-on-primary font-label text-label-lg hover:bg-primary-hover transition-all shadow-[0_4px_16px_rgba(16,18,34,0.18)] hover:-translate-y-0.5 flex items-center justify-center gap-2 btn-shimmer" type="submit">
           {button}
           {icon('arrow', 'w-4 h-4', '2.2')}
         </button>
@@ -39,7 +39,7 @@ INDEX = f"""
       <div class="lg:col-span-7 flex flex-col items-start">
         <h1 class="font-display text-[42px] leading-[48px] lg:text-[58px] lg:leading-[64px] text-primary tracking-[-0.035em] font-extrabold">
           Money makes sense when your assistant
-          <span class="relative inline-block whitespace-nowrap"><span class="relative z-10">actually reads</span><span class="absolute bottom-1.5 left-0 w-full h-3.5 bg-[#fef08a] -z-0 rounded-sm"></span></span>
+          <span class="relative inline-block whitespace-nowrap"><span class="relative z-10">actually reads</span><span class="absolute -bottom-1 left-0 w-full h-1 bg-[#fef08a] -z-0 rounded-sm"></span></span>
           the numbers.
         </h1>
         <p class="mt-6 font-body text-[17px] leading-[26px] text-secondary max-w-2xl">
@@ -123,7 +123,7 @@ INDEX = f"""
               </div>
               <span class="px-2.5 py-1 rounded-full bg-[#ecfdf5] border border-[#a7f3d0]/60 text-[#047857] font-label text-label-sm font-bold tnum whitespace-nowrap">₹475 / day</span>
             </div>
-            <div class="grid grid-cols-3 gap-3 pt-1">
+            <div class="grid grid-cols-2 min-[420px]:grid-cols-3 gap-3 pt-1">
               <div class="p-3.5 rounded-xl bg-surface-container-low border border-hairline">
                 <span class="font-body text-body-sm text-secondary block">Cycle start</span>
                 <span class="font-currency-card text-currency-card text-primary tnum font-bold">₹68,500</span>
@@ -134,7 +134,7 @@ INDEX = f"""
                 <span class="font-currency-card text-currency-card text-primary tnum font-bold">₹41,200</span>
                 <span class="text-[11px] text-[#e53935] font-semibold">60.1% cycle</span>
               </div>
-              <div class="p-3.5 rounded-xl bg-[#ecfdf5] border border-[#a7f3d0]/80">
+              <div class="col-span-2 min-[420px]:col-span-1 p-3.5 rounded-xl bg-[#ecfdf5] border border-[#a7f3d0]/80">
                 <span class="font-body text-body-sm text-[#047857] block font-medium">Safe to spend</span>
                 <span class="font-currency-card text-currency-card text-[#047857] tnum font-extrabold">₹12,450</span>
                 <span class="text-[11px] text-[#047857] font-semibold">6 days left</span>
@@ -311,13 +311,13 @@ INDEX = f"""
           </div>
           <div class="mt-8 grid grid-cols-2 gap-3">
             <div class="p-3.5 rounded-xl bg-surface-container-low border border-hairline">
-              <span class="font-label text-label-sm text-secondary block font-medium">Old regime</span>
-              <span class="font-currency-card text-currency-card text-primary tnum font-bold">₹1,84,320</span>
+              <span class="font-label text-label-sm text-secondary block font-medium min-h-[40px] min-[420px]:min-h-0">Old regime</span>
+              <span class="font-currency-card text-[16px] min-[420px]:text-currency-card text-primary tnum font-bold">₹1,84,320</span>
               <span class="font-body text-body-sm text-secondary mt-1 block">with 80C + 80D</span>
             </div>
             <div class="p-3.5 rounded-xl bg-[#ecfdf5] border border-[#a7f3d0]/80">
-              <span class="font-label text-label-sm text-[#047857] block font-medium">New regime</span>
-              <span class="font-currency-card text-currency-card text-[#047857] tnum font-extrabold">₹1,42,408</span>
+              <span class="font-label text-label-sm text-[#047857] block font-medium min-h-[40px] min-[420px]:min-h-0">New regime</span>
+              <span class="font-currency-card text-[16px] min-[420px]:text-currency-card text-[#047857] tnum font-extrabold">₹1,42,408</span>
               <span class="font-body text-body-sm text-[#047857] font-bold mt-1 block">Saves ₹41,912</span>
             </div>
           </div>

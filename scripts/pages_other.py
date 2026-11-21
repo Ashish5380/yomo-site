@@ -223,7 +223,7 @@ SECURITY = f"""
           <p class="font-body text-body-sm text-secondary">Write to <a class="text-primary font-semibold underline" href="mailto:{MAIL}?subject=Data%20Deletion%20Request">{MAIL}</a> with the subject "Data Deletion Request".</p>
         </div>
       </div>
-      <a class="h-12 px-6 rounded-xl bg-primary-container text-on-primary font-label text-label-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors shrink-0" href="mailto:{MAIL}?subject=Data%20Deletion%20Request">Request deletion {icon('arrow', 'w-4 h-4', '2.2')}</a>
+      <a class="h-12 px-6 rounded-xl bg-primary-container text-on-primary font-label text-label-lg flex items-center justify-center gap-2 hover:bg-primary-hover transition-colors shrink-0" href="mailto:{MAIL}?subject=Data%20Deletion%20Request">Request deletion {icon('arrow', 'w-4 h-4', '2.2')}</a>
     </div>
     <p class="mt-4 font-body text-body-sm text-secondary">Nightly backups are kept for 14 days for disaster recovery and then removed; a deletion request also removes the account from the active database immediately.</p>
   </section>
@@ -275,7 +275,7 @@ ABOUT = f"""
         </p>
         <p class="font-body text-body-lg text-primary font-semibold">The mission is simple: every Indian should be able to read their own money.</p>
         <div class="flex flex-wrap items-center gap-3 pt-2">
-          <a class="h-12 px-7 rounded-xl bg-primary-container text-on-primary font-label text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-primary transition-colors" href="index.html#request">Request an invite {icon('arrow', 'w-4 h-4', '2.2')}</a>
+          <a class="h-12 px-7 rounded-xl bg-primary-container text-on-primary font-label text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-hover transition-colors" href="index.html#request">Request an invite {icon('arrow', 'w-4 h-4', '2.2')}</a>
           <a class="h-12 px-6 rounded-xl border border-hairline bg-surface-container-lowest text-primary font-label text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container transition-colors" href="mailto:{MAIL}">{icon('mail', 'w-4 h-4', '2')} {MAIL}</a>
         </div>
       </div>

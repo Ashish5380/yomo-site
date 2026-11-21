@@ -1,5 +1,38 @@
 // Yomo marketing site — shared behaviour.
 (function () {
+  // The head sets the initial class before paint; controls live here so every
+  // page shares preference, system-theme changes, and browser-tab updates.
+  var themeKey = 'yomo-theme';
+  var systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  function savedTheme() {
+    try { return localStorage.getItem(themeKey); } catch (e) { return null; }
+  }
+  function showTheme(dark) {
+    document.documentElement.classList.toggle('dark', dark);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', dark ? '#0c111d' : '#f8f9fb');
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (button) {
+      button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      button.setAttribute('aria-pressed', String(dark));
+      button.querySelector('[data-theme-label]').textContent = dark ? 'Light mode' : 'Dark mode';
+      button.querySelector('[data-theme-icon]').textContent = dark ? '☀' : '☾';
+    });
+  }
+  showTheme(savedTheme() === 'dark' || (!savedTheme() && systemTheme.matches));
+  document.querySelectorAll('[data-theme-toggle]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var dark = !document.documentElement.classList.contains('dark');
+      try { localStorage.setItem(themeKey, dark ? 'dark' : 'light'); } catch (e) { /* private browsing */ }
+      showTheme(dark);
+    });
+  });
+  systemTheme.addEventListener('change', function () {
+    if (!savedTheme()) showTheme(systemTheme.matches);
+  });
+  window.addEventListener('storage', function (event) {
+    if (event.key === themeKey) showTheme(savedTheme() === 'dark' || (!savedTheme() && systemTheme.matches));
+  });
+
   // Mobile menu
   var toggle = document.getElementById('menu-toggle');
   var menu = document.getElementById('mobile-menu');

@@ -1,22 +1,140 @@
-/* Yomo marketing site — shared base for the "Serene Financial Flow" design.
-   Tokens live in the Tailwind config block in each page; this file carries only
-   what utilities cannot express. */
+/* Serene Financial Flow — same layout in light and dark. Tailwind reads these
+   channel values so its opacity utilities (bg-surface/85, etc.) still work. */
+:root {
+  color-scheme: light;
+  --color-surface: 248 249 251;
+  --color-surface-dim: 217 218 220;
+  --color-surface-bright: 248 249 251;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 243 244 246;
+  --color-surface-container: 237 238 240;
+  --color-surface-container-high: 231 232 234;
+  --color-surface-container-highest: 225 226 228;
+  --color-on-surface: 25 28 30;
+  --color-on-surface-variant: 70 70 77;
+  --color-inverse-surface: 46 49 50;
+  --color-inverse-on-surface: 240 241 243;
+  --color-hairline: 232 234 239;
+  --color-outline: 119 118 126;
+  --color-outline-variant: 199 197 206;
+  --color-primary: 5 7 34;
+  --color-primary-hover: 5 7 34;
+  --color-on-primary: 255 255 255;
+  --color-primary-container: 28 31 58;
+  --color-on-primary-container: 132 134 167;
+  --color-secondary: 89 94 114;
+  --color-on-secondary: 255 255 255;
+  --color-secondary-container: 221 225 250;
+  --color-on-secondary-container: 95 100 120;
+  --color-tertiary: 0 14 5;
+  --color-tertiary-container: 0 40 19;
+  --color-on-tertiary-container: 15 157 93;
+  --color-error: 186 26 26;
+  --color-error-container: 255 218 214;
+  --color-on-error-container: 147 0 10;
+  --color-primary-fixed: 223 224 255;
+  --color-primary-fixed-dim: 194 196 231;
+  --color-on-primary-fixed: 22 25 52;
+  --color-secondary-fixed: 221 225 250;
+  --color-secondary-fixed-dim: 193 197 221;
+  --color-tertiary-fixed: 130 250 176;
+  --color-tertiary-fixed-dim: 101 221 150;
+  --color-magenta: 230 0 126;
+  --color-prosperity: 31 164 99;
+}
+html.dark {
+  color-scheme: dark;
+  --color-surface: 12 17 29;
+  --color-surface-dim: 8 13 24;
+  --color-surface-bright: 28 38 55;
+  --color-surface-container-lowest: 22 30 46;
+  --color-surface-container-low: 17 24 39;
+  --color-surface-container: 29 39 57;
+  --color-surface-container-high: 37 48 68;
+  --color-surface-container-highest: 47 60 81;
+  --color-on-surface: 239 243 250;
+  --color-on-surface-variant: 187 198 216;
+  --color-inverse-surface: 239 243 250;
+  --color-inverse-on-surface: 22 30 46;
+  --color-hairline: 53 65 86;
+  --color-outline: 161 175 198;
+  --color-outline-variant: 88 102 124;
+  --color-primary: 242 245 255;
+  --color-primary-hover: 52 69 105;
+  --color-on-primary: 255 255 255;
+  --color-primary-container: 31 43 73;
+  --color-on-primary-container: 194 205 227;
+  --color-secondary: 181 193 213;
+  --color-on-secondary: 15 23 39;
+  --color-secondary-container: 42 54 78;
+  --color-on-secondary-container: 204 215 233;
+  --color-tertiary: 130 250 176;
+  --color-tertiary-container: 16 61 42;
+  --color-on-tertiary-container: 145 239 183;
+  --color-error: 255 149 149;
+  --color-error-container: 83 38 45;
+  --color-on-error-container: 255 190 190;
+  --color-primary-fixed: 184 195 232;
+  --color-primary-fixed-dim: 147 162 207;
+  --color-on-primary-fixed: 16 23 42;
+  --color-secondary-fixed: 184 195 232;
+  --color-secondary-fixed-dim: 147 162 207;
+  --color-tertiary-fixed: 130 250 176;
+  --color-tertiary-fixed-dim: 101 221 150;
+  --color-magenta: 255 96 184;
+  --color-prosperity: 90 217 148;
+}
 html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   margin: 0;
-  background: #f8f9fb;
-  color: #191c1e;
+  background: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
   overflow-x: clip; /* decorative glow blobs are wider than small viewports */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   overscroll-behavior: none;
 }
-::selection { background: #dde1fa; color: #161b2c; }
+::selection { background: rgb(var(--color-secondary-container)); color: rgb(var(--color-on-surface)); }
 ::-webkit-scrollbar { display: none; }
 
 .tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
-.hair { border: 1px solid #e8eaef; }
+.hair { border: 1px solid rgb(var(--color-hairline)); }
+
+/* The small illustrative accents use fixed light-mode Tailwind arbitrary
+   values. Retint their surfaces/labels in dark mode; leave the navy callouts,
+   green Plus CTA and mascot artwork intact. */
+html.dark [class~="bg-[#ecfdf5]"] { background-color: #123a2d; }
+html.dark [class~="border-[#a7f3d0]/60"],
+html.dark [class~="border-[#a7f3d0]/80"],
+html.dark [class~="border-[#a7f3d0]"] { border-color: #28694d; }
+html.dark [class~="text-[#047857]"] { color: #81e6ad; }
+html.dark [class~="bg-[#fef9c3]"],
+html.dark [class~="bg-[#fef9c3]/50"],
+html.dark [class~="bg-[#fef9c3]/40"] { background-color: rgb(89 71 29 / .25); }
+html.dark [class~="bg-[#fef9c3]/70"] { background-color: #59471d; }
+html.dark [class~="bg-[#fef08a]"] { background-color: #655020; }
+html.dark [class~="border-[#fde047]/60"],
+html.dark [class~="border-[#fde047]/70"] { border-color: #8d752c; }
+html.dark [class~="bg-[#eef2ff]"],
+html.dark [class~="bg-[#eef2ff]/70"] { background-color: #283455; }
+html.dark [class~="bg-[#f3e8ff]"] { background-color: #382748; }
+html.dark [class~="text-[#7e22ce]"] { color: #d8a9ff; }
+html.dark [class~="bg-[#fee2e2]"] { background-color: #4a2730; }
+html.dark [class~="border-[#fca5a5]"] { border-color: #854653; }
+html.dark [class~="text-[#e53935]"],
+html.dark [class~="text-[#ef4444]"] { color: #ff9991; }
+html.dark input[type="email"] {
+  background-color: rgb(var(--color-surface-container-lowest));
+  color: rgb(var(--color-primary));
+  border-color: rgb(var(--color-hairline));
+}
+html.dark input[type="email"]::placeholder { color: rgb(var(--color-secondary)); }
+html.dark [class~="ring-white"] { --tw-ring-color: rgb(var(--color-surface-container-lowest)); }
+html.dark .glow-pulse { opacity: .25; }
+html.dark [class~="from-[#fef08a]/35"] { --tw-gradient-from: rgb(101 80 32 / .18) var(--tw-gradient-from-position); }
+
+:focus-visible { outline-offset: 3px; }
 
 @keyframes floatGentle {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
